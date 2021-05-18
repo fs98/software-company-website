@@ -13,4 +13,12 @@ class Role extends Model
     {
       return $this->hasMany(User::class);
     }
+
+    /**
+     * Attributes
+     */
+
+    public function getNameAttribute($value) {
+      return ucfirst($value);
+    }
 }

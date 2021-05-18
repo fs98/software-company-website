@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
+use App\Http\Requests\NewUserRequest;
 use DataTables;
+use RealRashid\SweetAlert\Facades\Alert;  
 
 class UserController extends Controller
 { 
@@ -15,8 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all(); 
-        return view('admin.users', [
+        $users = User::nonSuperadmin()->get(); //Defined by scope in User Model 
+        return view('admin.users.index', [
           'users' => $users
         ]);
     }
@@ -51,6 +54,9 @@ class UserController extends Controller
     public function show(User $user)
     {
         //
+        return view('admin.users.show', [
+          'user' => $user
+        ]);
     }
 
     /**
@@ -61,7 +67,13 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        //  
+        $roles = Role::select(['id','name'])->get();
+        return view('admin.users.edit', [
+          'user' => $user,
+          'roles' => $roles
+        ]);
+
     }
 
     /**
@@ -71,9 +83,13 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(NewUserRequest $request, User $user)
     {
-        //
+        //      
+          $user->update($request->all()); 
+          Alert::success('Gotovo', 'Uspješno ažurirani podaci za korisnika ' . $user->name . '.');
+          return redirect()->route('users.show', $user);
+
     }
 
     /**
@@ -84,6 +100,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        // $user->delete();
+      // return redirect()->route('users.index');
     }
 }

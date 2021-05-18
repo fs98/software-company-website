@@ -38,10 +38,22 @@
                     <tr>
                       <td>{{ $user->name }}</td>
                       <td>{{ $user->email }}</td>
-                      <td>{!! $user->email_verified_at !!}</td>
+                      <td>{!! $user->verified_at !!}</td>
                       <td>{{ $user->created_at }}</td>
                       <td>{{ $user->role->name }}</td>
-                      <td></td>
+                      <td>
+                        <a href="{{ route('users.show', $user) }}" class="btn btn-secondary">
+                          Vidi
+                        </a>
+                        <a href="{{ route('users.edit', $user)}}" class="btn btn-success">
+                          Uredi
+                        </a>
+                        <form action="" class="d-inline">
+                          <button class="btn btn-outline-success" type="submit">
+                            Izbriši
+                          </button>
+                        </form>
+                      </td>
                     </tr>
                   @endforeach
                 </tbody>
