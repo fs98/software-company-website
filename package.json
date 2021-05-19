@@ -27,6 +27,8 @@
         "@fortawesome/fontawesome-free": "^5.15.3",
         "datatables.net-dt": "^1.10.24",
         "font-awesome": "^4.7.0",
-        "sweetalert2": "^11.0.7"
+        "sweetalert": "^2.1.2",
+        "sweetalert2": "^11.0.7",
+        "typeface-nunito": "^1.1.13"
     }
 }

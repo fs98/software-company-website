@@ -48,10 +48,10 @@
                         <a href="{{ route('users.edit', $user)}}" class="btn btn-success">
                           Uredi
                         </a>
-                        <form action="" class="d-inline">
-                          <button class="btn btn-outline-success" type="submit">
-                            Izbriši
-                          </button>
+                        <form action="{{ route('users.destroy', $user) }}" method="POST" class="d-inline" id="delete-user">
+                          @csrf
+                          @method('DELETE')
+                          <a class="btn btn-outline-success" onclick="deleteConfirm('delete-user')">Izbriši</a>
                         </form>
                       </td>
                     </tr>

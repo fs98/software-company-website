@@ -12,11 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/sb-admin-2.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="{{ asset('js/sb-admin-2.js') }}" defer></script> 
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -46,7 +42,7 @@
 
           <!-- Nav Item - Dashboard -->
           <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="#">
                   <i class="fas fa-fw fa-tachometer-alt"></i>
                   <span>{{ __('Početna') }}</span></a>
           </li>
@@ -60,17 +56,17 @@
           </div>
 
           <!-- Nav Item - Pages Collapse Menu -->
-          <li class="nav-item {{ Route::currentRouteNamed('users.*') ? 'active' : '' }}">
+          <li class="nav-item {{ Route::currentRouteNamed('users.*') || Route::currentRouteNamed('home') ? 'active' : '' }}">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                   aria-expanded="true" aria-controls="collapseTwo">
                   <i class="fas fa-fw fa-user"></i>
-                  <span>{{ __('Korisnci') }}</span>
+                  <span>{{ __('Korisnici') }}</span>
               </a>
-              <div id="collapseTwo" class="collapse {{ Route::currentRouteNamed('users.*') ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div id="collapseTwo" class="collapse {{ Route::currentRouteNamed('users.*') || Route::currentRouteNamed('home') ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Upravljanje:</h6>
-                      <a class="collapse-item {{ Route::currentRouteNamed('users.index') ? 'active' : '' }}" href="{{ route('users.index') }}">Pregled</a>
-                      <a class="collapse-item" href="cards.html">Cards</a>
+                      <a class="collapse-item {{ Route::currentRouteNamed('users.index') || Route::currentRouteNamed('home') ? 'active' : '' }}" href="{{ route('users.index') }}">Pregled</a>
+                      <a class="collapse-item" href="#">Cards</a>
                   </div>
               </div>
           </li>
@@ -86,10 +82,10 @@
                   data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Custom Utilities:</h6>
-                      <a class="collapse-item" href="utilities-color.html">Colors</a>
-                      <a class="collapse-item" href="utilities-border.html">Borders</a>
-                      <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                      <a class="collapse-item" href="utilities-other.html">Other</a>
+                      <a class="collapse-item" href="#">Colors</a>
+                      <a class="collapse-item" href="#">Borders</a>
+                      <a class="collapse-item" href="#">Animations</a>
+                      <a class="collapse-item" href="#">Other</a>
                   </div>
               </div>
           </li>
@@ -113,27 +109,27 @@
                   data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Login Screens:</h6>
-                      <a class="collapse-item" href="login.html">Login</a>
-                      <a class="collapse-item" href="register.html">Register</a>
-                      <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                      <a class="collapse-item" href="#">Login</a>
+                      <a class="collapse-item" href="#">Register</a>
+                      <a class="collapse-item" href="#">Forgot Password</a>
                       <div class="collapse-divider"></div>
                       <h6 class="collapse-header">Other Pages:</h6>
-                      <a class="collapse-item" href="404.html">404 Page</a>
-                      <a class="collapse-item" href="blank.html">Blank Page</a>
+                      <a class="collapse-item" href="#">404 Page</a>
+                      <a class="collapse-item" href="#">Blank Page</a>
                   </div>
               </div>
           </li>
 
           <!-- Nav Item - Charts -->
           <li class="nav-item">
-              <a class="nav-link" href="charts.html">
+              <a class="nav-link" href="#">
                   <i class="fas fa-fw fa-chart-area"></i>
                   <span>Charts</span></a>
           </li>
 
           <!-- Nav Item - Tables -->
           <li class="nav-item">
-              <a class="nav-link" href="tables.html">
+              <a class="nav-link" href="#">
                   <i class="fas fa-fw fa-table"></i>
                   <span>Tables</span></a>
           </li>
@@ -167,7 +163,7 @@
                   <form
                       class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                       <div class="input-group">
-                          <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                          <input type="text" class="form-control bg-light border-0 small" placeholder="{{ __('Pretraži...') }}"
                               aria-label="Search" aria-describedby="basic-addon2">
                           <div class="input-group-append">
                               <button class="btn btn-success" type="button">
@@ -374,7 +370,7 @@
           <footer class="sticky-footer bg-white">
               <div class="container my-auto">
                   <div class="copyright text-center my-auto">
-                      <span>Copyright &copy; Your Website 2020</span>
+                      <span>Copyright &copy; KatrielDev {{ now()->year }} | Admin panel designed by <a href="https://getbootstrap.com/">Bootstrap</a></span>
                   </div>
               </div>
           </footer>
@@ -417,5 +413,5 @@
       </div>
   </div> 
 </body>
-
+ 
 </html>

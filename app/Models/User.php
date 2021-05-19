@@ -77,7 +77,7 @@ class User extends Authenticatable
       if ($this->email_verified_at != '/') {
         return "<span class='badge badge-success'>Verifikovan</span>";
       } else {
-        return "<span class='badge badge-danger'>Nije Verifikovan</span>";
+        return "<span class='badge badge-danger'>Nije verifikovan</span>";
       } 
     }
 

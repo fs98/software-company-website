@@ -29,10 +29,10 @@
                 {!! $user->verified_at !!} 
               </div>
               <a class="btn btn-success" href="{{ route('users.edit', $user) }}">Uredi</a>
-              <form action="{{ route('users.destroy', $user) }}" method="POST" class="d-inline">
+              <form action="{{ route('users.destroy', $user) }}" method="POST" class="d-inline" id="delete-user">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-outline-success" type="submit">Izbriši</button>
+                <a class="btn btn-outline-success" onclick="deleteConfirm('delete-user')">Izbriši</a>
               </form>
             </div>
           </div>
