@@ -1,0 +1,133 @@
+/*
+**
+* This is a custom stylesheet 
+**
+*/
+body {
+  font-family: Poppins !important;
+}
+
+:root {
+  --purple: #1F0045;
+  --white: #fafafa;
+}
+
+/* Utility classes */
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.purple-link:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.min-w-100 {
+  min-width: 100%;
+}
+
+.min-vh-75 {
+  height: 75vh !important;
+}
+
+.min-vh-65 {
+  height: 65vh !important;
+}
+
+.min-vh-55 {
+  height: 55vh !important;
+}
+
+.line-height-1-5 {
+  line-height: 1.5;
+}
+
+.line-height-60 {
+  line-height: 60px;
+}
+
+.width-60 {
+  width: 60px;
+}
+
+.height-60 {
+  height: 60px;
+}
+
+.border-weight-2 {
+  border-width: 3px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+/* Footer Input Fields */
+
+.footer-input {
+  color: var(--white);
+  font-size: 16px;
+}
+ 
+.footer-input::placeholder {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.footer-input:focus {
+  color: var(--white);
+  font-size: 16px;
+  box-shadow: none;
+  border-color: var(--purple) !important;
+}
+
+/* Video header */ 
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
