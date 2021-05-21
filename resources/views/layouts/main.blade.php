@@ -86,20 +86,20 @@
     @yield('main')
   </main>
   
-  <footer class="">
-    <section class="bg-black" style="min-height: 85vh">
+  <footer class="position-relative" style="background-image: url('https://hireukrainiandevelopers.com/wp-content/uploads/2019/09/ebq6umm-min-1.jpg.webp'); background-size: cover; background-repeat: no-repeat; ">
+    <section style="background-color: rgba(0, 0, 0, 0.95)">
       <div class="container py-5 h-100">
 
         {{-- Top Footer Row --}}
-        <div class="row min-vh-55 pt-5 mt-5 h-100">
+        <div class="row pt-5 mt-5 h-100">
   
           {{-- Left Side of Footer --}}
-          <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-between">
-              <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="100" width="auto">
+          <div class="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-between">
+              <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="100" width="auto" class="mb-3">
   
-              <h1 class="text-white font-weight-bold line-height-1-5">
+              <h1 class="text-white font-weight-bold line-height-1-5 mb-5 mt-3">
                 {{ __('Vaš uspjeh je') }} 
-                <br>
+                <br class="d-none d-lg-block">
                 {{ __('naša motivacija.') }}
               </h1>
   
@@ -149,10 +149,10 @@
           </div>    
   
           {{-- Right Side of Footer --}}
-          <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
-            <form action="">
+          <div class="col-12 col-lg-6 d-flex justify-content-start justify-content-lg-end align-items-center mt-5 mt-lg-0">
+            <form action=""> 
               <div class="form-group">
-                <input type="text" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="name" placeholder="{{ __('Ime') }}" autofocus>
+                <input type="text" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="name" placeholder="{{ __('Ime') }}">
               </div>  
               <div class="form-group">
                 <input type="email" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="email" placeholder="{{ __('Email') }}">
@@ -179,7 +179,7 @@
       </div>
     </section>
 
-    <section class="bg-black" style="min-height: 10vh">
+    <section style="background-color: rgba(0, 0, 0, 0.95)" class="pt-5 pt-lg-0">
       <div class="container pb-5">
         <div class="row">
           <div class="col-12 text-center">
@@ -200,7 +200,7 @@
       </div>
     </section>
 
-    <section class="bg-purple text-white" style="min-height: 5vh">
+    <section class="bg-purple text-white" style="opacity: 95%;">
       <div class="container bg-purple py-3">
         <div class="row">
           <div class="col-12 text-center">
@@ -209,6 +209,7 @@
         </div>
       </div>
     </section>
+    
   </footer>
 
 @yield('scripts')

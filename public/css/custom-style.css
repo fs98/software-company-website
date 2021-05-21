@@ -75,6 +75,13 @@ body {
   font-size: 16px;
 }
 
+/* Rotate Title 90deg on Large devices */
+@media (min-width: 992px) {
+  .translate-lg-90-deg {
+    transform: rotate(-90deg);
+  }
+}
+
 /* Footer Input Fields */
 
 .footer-input {
@@ -87,13 +94,14 @@ body {
   color: var(--white);
 }
 
-.footer-input:focus {
+.footer-input:focus
+ {
   color: var(--white);
   font-size: 16px;
   box-shadow: none;
   border-color: var(--purple) !important;
 }
-
+ 
 /* Video header */ 
 
 header video {
@@ -125,7 +133,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    background: url('https://hireukrainiandevelopers.com/wp-content/uploads/2019/09/ebq6umm-min-1.jpg.webp') black no-repeat center center scroll;
   }
   header video {
     display: none;
