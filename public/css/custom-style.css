@@ -8,100 +8,280 @@ body {
 }
 
 :root {
-  --purple: #1F0045;
-  --white: #fafafa;
+  --dark-jungle-green: #151c19;
+  --bottle-green: #26664a;
+  --ocean-green: #26c281;
+  --tea-green: #c3e8cc;
+  --honeydew: #e9f5ec; 
 }
 
-/* Utility classes */
+/**
+* Utility classes 
+*/
 
-.bg-purple {
-  background-color: var(--purple);
-}
-
-.text-purple {
-  color: var(--purple);
-}
-
-.purple-link:hover {
-  color: black;
-  transition: 0.5s;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.min-h-100 {
-  min-height: 100%;
-}
-
-.min-w-100 {
-  min-width: 100%;
-}
-
-.min-vh-75 {
-  height: 75vh !important;
-}
-
-.min-vh-65 {
-  height: 65vh !important;
-}
-
-.min-vh-55 {
-  height: 55vh !important;
-}
-
-.line-height-1-5 {
-  line-height: 1.5;
-}
-
-.line-height-60 {
-  line-height: 60px;
-}
-
-.width-60 {
-  width: 60px;
-}
-
-.height-60 {
-  height: 60px;
-}
-
-.border-weight-2 {
-  border-width: 3px;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
-
-/* Rotate Title 90deg on Large devices */
-@media (min-width: 992px) {
-  .translate-lg-90-deg {
-    transform: rotate(-90deg);
+  /* General */
+  .bg-purple {
+    background-color: var(--purple);
   }
-}
+  
+  .text-purple {
+    color: var(--purple);
+  }
+  
+  .purple-link:hover {
+    color: black;
+    transition: 0.5s;
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  
+  .min-h-100 {
+    min-height: 100%;
+  }
+  
+  .min-w-100 {
+    min-width: 100%;
+  }
+  
+  .min-vh-75 {
+    height: 75vh !important;
+  }
+  
+  .min-vh-65 {
+    height: 65vh !important;
+  }
+  
+  .min-vh-55 {
+    height: 55vh !important;
+  }
+  
+  .line-height-1-5 {
+    line-height: 1.5;
+  }
+  
+  .line-height-60 {
+    line-height: 60px;
+  }
+  
+  .width-60 {
+    width: 60px;
+  }
+  
+  .height-60 {
+    height: 60px;
+  }
+  
+  .border-weight-2 {
+    border-width: 3px;
+  }
+  
+  .font-size-16 {
+    font-size: 16px;
+  }
 
-/* Footer Input Fields */
+  /* Text colors */
+  .text-dark-jungle-green{
+    color: var(--dark-jungle-green);
+  }
 
-.footer-input {
-  color: var(--white);
-  font-size: 16px;
-}
+  .text-bottle-green 
+  {
+    color: var(--bottle-green);
+  }
+
+  .text-ocean-green 
+  {
+    color: var(--ocean-green);
+  }
+
+  .text-tea-green 
+  {
+    color: var(--tea-green);
+  }
+
+  .text-honey-dew
+  {
+    color: var(--honeydew);
+  }
+
+  /* Background-colors */
+  .bg-dark-jungle-green{
+    background-color: var(--dark-jungle-green);
+  }
+
+  .bg-bottle-green
+  {
+    background-color: var(--bottle-green);
+  }
+
+  .bg-ocean-green 
+  {
+    background-color: var(--ocean-green);
+  }
+
+  .bg-tea-green 
+  {
+    background-color: var(--tea-green);
+  }
+
+  .bg-honey-dew
+  {
+    background-color: var(--honeydew);
+  }
+
+  /* Buttons */
+  .btn-outline-honey-dew
+  {
+    background-color: transparent;
+    border-color: var(--honeydew);
+    color: var(--honeydew);
+  }
+
+  .btn-outline-honey-dew:hover
+  {
+    background-color: transparent;
+    border: 1px solid var(--ocean-green);
+    color: var(--ocean-green);
+    transition: 1s;
+  }
+
+/**
+* Font weight 
+* Font Weight Classes 300 - light, 400 - normal and 700 - bold Already Exist
+*/ 
+  
+  .font-weight-extra-light
+  {
+    font-weight: 200;
+  }
+
+  .font-weight-semi-bold
+  {
+    font-weight: 600;
+  }
  
-.footer-input::placeholder {
-  font-size: 16px;
-  color: var(--white);
+
+/**
+* Full Screen Navbar 
+*/
+
+    /* The Overlay (background) */
+    .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    /* Position the content inside the overlay */
+    .overlay-content {
+      position: relative;
+      top: 25%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+
+    /* The navigation links inside the overlay */
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+/**
+* Preloader 
+*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+} 
+
+.centered{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);  
+}
+.blob-1,.blob-2{
+  width:70px;
+  height:70px;
+  position:absolute;
+  background:#fff;
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+.blob-1{
+  left:20%;
+  animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+  left:80%;
+  animation:osc-r 2.5s ease infinite;
+  background:var(--ocean-green)
+}
+@keyframes osc-l{
+  0%{left:20%;}
+  25%{left:50%;}
+  100%{left:20%;}
+}
+@keyframes osc-r{
+  0%{left:80%;}
+  50%{left:50%;}
+  100%{left:80%;}
 }
 
-.footer-input:focus
- {
-  color: var(--white);
-  font-size: 16px;
-  box-shadow: none;
-  border-color: var(--purple) !important;
-}
- 
+/**
+* Video Header 
+*/
+
+
 /* Video header */ 
 
 header video {
@@ -127,13 +307,13 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: 1;
 }
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('https://hireukrainiandevelopers.com/wp-content/uploads/2019/09/ebq6umm-min-1.jpg.webp') black no-repeat center center scroll;
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') var(--honeydew) no-repeat center center scroll;
   }
   header video {
     display: none;

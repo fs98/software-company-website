@@ -18,6 +18,7 @@ import Swal from 'sweetalert2';
 //     });
 // }
 
+// Confirm delete dialog
 window.deleteConfirm = function(formId)
 {
   const swalWithBootstrapButtons = Swal.mixin({
@@ -55,4 +56,4 @@ window.deleteConfirm = function(formId)
       )
     }
   })
-}
+} 

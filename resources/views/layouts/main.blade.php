@@ -12,7 +12,7 @@
   <title>{{ config('app.name', 'Katriel Dev') }}</title>
 
   <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script> 
+  <script src="{{ asset('js/app.js') }}"></script> 
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
@@ -22,195 +22,96 @@
 
 </head>
 
-<body>
+<body class="overflow-hidden"> 
 
-  <header class="min-vh-100 position-relative w-100 overflow-hidden bg-black">
-    <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto">
-      <source src="{{ asset('img/videos/header-video.mp4' )}}" type="video/mp4"> 
+  <!-- Preloader -->
+  {{-- <div id="preloader">
+    <div class="bg-bottle-green h-100 d-flex justify-content-center align-items-center" id="spinner">
+      <div class="centered">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+      </div>
+    </div>
+  </div> --}}
+
+  <!-- The Overlay Navbar -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div> 
+
+  <header class="min-vh-100 position-relative w-100 overflow-hidden bg-dark"> {{-- style="border-end-end-radius: 40%" --}}
+    <div class="overlay" class="bg-white"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto" >
+      <source src="https://player.vimeo.com/external/553362038.sd.mp4?s=7102361a0156a3689b83848a7cce9044180a335b&profile_id=164&oauth2_token_id=57447761" type="video/mp4"> 
     </video>
     <div class="container h-100 position-relative">
       <nav class="navbar navbar-dark py-5">
         <a class="navbar-brand" href="#">
-          <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="55" width="auto">
+          <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
         </a>
-        <button class="navbar-toggler text-right border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="35" width="auto">
+        <button class="navbar-toggler text-right border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
+          <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
         </button>
       </nav>
-      <div class="d-flex justify-content-between align-items-center" style="margin-top: 25vh">
-        <div class="text-white">
-          <h1 class="display-1 text-uppercase font-weight-bold">
-            {{ __('Vaš cilj')}}
+      <div class="d-flex justify-content-start align-items-center" style="margin-top: 25vh">
+        <div class="text-honey-dew">
+          <h1 class="display-1 text-uppercase font-weight-semi-bold">
+            {{ __('Hello,')}}
           </h1>
-          <h1 class="display-4 mb-0 bg-purple py-3 pr-5 pl-4 font-weight-bold">
-            {{ __('... naša je motivacija') }}
+          <h1 class="display-3 mb-0">
+            <span class="font-weigt-extra-light">{{ __('We are') }}</span>
+            <span class="text-uppercase font-weight-bold text-ocean-green">Katriel Dev</span>
           </h1>
-        </div>
-        <div class="ml-3">
-          <img src="{{ asset('img/icons/line.svg') }}" alt="line" width="350">
-        </div>
+          <a href="" class="btn btn-outline-honey-dew rounded-0 py-3 px-5 mt-4">
+            <span class="noselect h3 text-uppercase font-weight-light">
+              {{ __('Contact Us') }}
+            </span>
+          </a>
+        </div> 
       </div>
     </div>
   </header>
 
-{{-- 
-  <header>
-    <div class="fixed-top text-center">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <div class="container">
-        <nav class="navbar navbar-light">
-          <a class="navbar-brand" href="#">Hidden brand</a>
-          <button class="navbar-toggler text-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-      </div>
-    </div>  
-      <div class="video-container bg-danger" style="position: absolute; overflow: hidden; min-width: 100%; top: 0; left: 0">
-        <video autoplay loop muted id="video-bg" class="w-100">
-          
-          <source src="http://bigcom.com/assets/2014/08/iChooseB.mp4" type="video/mp4">
-  
-        </video>
-      </div>
-    
-  </header> --}}
+  <style>  
+  </style>
 
   <main>
     @yield('main')
   </main>
   
-  <footer class="position-relative" style="background-image: url('https://hireukrainiandevelopers.com/wp-content/uploads/2019/09/ebq6umm-min-1.jpg.webp'); background-size: cover; background-repeat: no-repeat; ">
-    <section style="background-color: rgba(0, 0, 0, 0.95)">
-      <div class="container py-5 h-100">
+  <footer></footer>
 
-        {{-- Top Footer Row --}}
-        <div class="row pt-5 mt-5 h-100">
-  
-          {{-- Left Side of Footer --}}
-          <div class="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-between">
-              <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="100" width="auto" class="mb-3">
-  
-              <h1 class="text-white font-weight-bold line-height-1-5 mb-5 mt-3">
-                {{ __('Vaš uspjeh je') }} 
-                <br class="d-none d-lg-block">
-                {{ __('naša motivacija.') }}
-              </h1>
-  
-              <div>
-                <div class="mb-3">
-                  <a href="" class="text-purple text-decoration-none purple-link mb-3">  
-                    <div class="row">
-                      <span class="fa-stack fa-2x">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-map-marker-alt fa-stack-1x fa-inverse"></i>
-                      </span> 
-                      <span class="text-white d-flex align-items-center ml-3"> 
-                        Donje Putićevo 109, 72270 Travnik
-                        <br>
-                        Bosna i Hercegovina
-                      </span>
-                    </div>
-                  </a>
-                </div>
-                <div class="mb-3"> 
-                  <a href="" class="text-purple text-decoration-none purple-link mt-3">  
-                    <div class="row">
-                      <span class="fa-stack fa-2x">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
-                      </span> 
-                      <span class="text-white d-flex align-items-center ml-3"> 
-                        +387 30 555 666 
-                      </span>
-                    </div> 
-                  </a>
-                </div>
-                <div>  
-                  <a href="mailto:info@katrieldev.com" class="text-purple text-decoration-none purple-link mt-3">  
-                    <div class="row">
-                      <span class="fa-stack fa-2x">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                      <span class="text-white d-flex align-items-center ml-3"> 
-                        info@katrieldev.com 
-                      </span>
-                    </div> 
-                  </a>
-                </div>
-              </div> 
-          </div>    
-  
-          {{-- Right Side of Footer --}}
-          <div class="col-12 col-lg-6 d-flex justify-content-start justify-content-lg-end align-items-center mt-5 mt-lg-0">
-            <form action=""> 
-              <div class="form-group">
-                <input type="text" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="name" placeholder="{{ __('Ime') }}">
-              </div>  
-              <div class="form-group">
-                <input type="email" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="email" placeholder="{{ __('Email') }}">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input mb-4" id="phone" placeholder="{{ __('Telefon') }}">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control bg-transparent border-top-0 border-right-0 border-left-0 rounded-0 border-white border-weight-2 footer-input" id="message" rows="4" placeholder="{{ __('Poruka') }}"></textarea>
-                <small id="formDesription" class="form-text text-white mt-4">
-                  {{ __('Your details will not be shared with any third party..') }}
-                  <a href="#">
-                    {{ __('Privacy Policy') }}  
-                  </a></small>
-              </div>
-              <button class="btn bg-purple text-white btn-block mt-4 font-size-16 font-weight-bold py-2 rounded-0">
-                {{ __('Pošalji') }} 
-              </button> 
-            </form>
-          </div>
-       
-        </div>
-      
-      </div>
-    </section>
+<script>
+  /* Open when someone clicks on the span element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
 
-    <section style="background-color: rgba(0, 0, 0, 0.95)" class="pt-5 pt-lg-0">
-      <div class="container pb-5">
-        <div class="row">
-          <div class="col-12 text-center">
-            <a href="" class="text-white h4 mr-5">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </a>
-            <a href="" class="text-white h4 mr-5">
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="" class="text-white h4 mr-5">
-              <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="" class="text-white h4">
-              <i class="fab fa-linkedin-in fa-2x"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
 
-    <section class="bg-purple text-white" style="opacity: 95%;">
-      <div class="container bg-purple py-3">
-        <div class="row">
-          <div class="col-12 text-center">
-            Copyright &copy; by KatrielDev {{ now()->year }}
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  </footer>
+  /* Preloader */
+  $(window).on('load', function() { // makes sure the whole site is loaded  
+      $('#preloader').delay(2000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+      $('body').delay(2000).css({'overflow':'visible'});
+  })
+
+  // Aos Init
+  AOS.init();
+</script>
 
 @yield('scripts')
 </body>
