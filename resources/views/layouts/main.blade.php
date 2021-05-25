@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="overflow-hidden"> 
+<body class="bg-honey-dew"> 
 
   <!-- Preloader -->
   {{-- <div id="preloader">
@@ -42,17 +42,40 @@
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="#" class="{{ Route::currentRouteNamed('public-home') ? "active" : "" }}">
+        {{ __('Početna') }}
+      </a>
+      <a href="#">
+        {{ __('O nama') }}
+      </a>
+      <a href="#">
+        {{ __('Servisi') }}
+      </a>
+      <a href="#">
+        {{ __('Kontakt') }}
+      </a>
+      <div style="display: inline-block">
+        <a href="" class="d-inline">BHS</a> 
+        <span class="lang-separator">|</span>
+        <a href="" class="d-inline">DE</a> 
+        <span class="lang-separator">|</span>
+        <a href="" class="d-inline">EN</a> 
+      </div>
     </div>
 
   </div> 
 
-  <header class="min-vh-100 position-relative w-100 overflow-hidden bg-dark"> {{-- style="border-end-end-radius: 40%" --}}
-    <div class="overlay" class="bg-white"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto" >
+  <header class="position-relative w-100 overflow-hidden bg-dark custom-border-radius min-vh-100"> {{-- style="border-end-end-radius: 40%" --}}
+    <div class="loading r">
+      <div class="loading_line_wrapper">
+        <div class="loading_line">
+          <div class="loading_line_inner loading_line_inner--1"></div>
+          <div class="loading_line_inner loading_line_inner--2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" class="bg-honey-dew"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto">
       <source src="https://player.vimeo.com/external/553362038.sd.mp4?s=7102361a0156a3689b83848a7cce9044180a335b&profile_id=164&oauth2_token_id=57447761" type="video/mp4"> 
     </video>
     <div class="container h-100 position-relative">
@@ -60,22 +83,26 @@
         <a class="navbar-brand" href="#">
           <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
         </a>
-        <button class="navbar-toggler text-right border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
+        <button onclick="openNav()" class="navbar-toggler text-right border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
           <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
         </button>
       </nav>
       <div class="d-flex justify-content-start align-items-center" style="margin-top: 25vh">
         <div class="text-honey-dew">
           <h1 class="display-1 text-uppercase font-weight-semi-bold">
-            {{ __('Hello,')}}
+            {{ __('Vaš cilj,')}}
           </h1>
           <h1 class="display-3 mb-0">
-            <span class="font-weigt-extra-light">{{ __('We are') }}</span>
-            <span class="text-uppercase font-weight-bold text-ocean-green">Katriel Dev</span>
+            <span class="font-weigt-extra-light">
+              {{ __('naša je') }}
+            </span>
+            <span class="text-uppercase font-weight-bold text-ocean-green">
+              {{ __('Motivacija!') }}
+            </span>
           </h1>
-          <a href="" class="btn btn-outline-honey-dew rounded-0 py-3 px-5 mt-4">
-            <span class="noselect h3 text-uppercase font-weight-light">
-              {{ __('Contact Us') }}
+          <a href="" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
+            <span class="text h3 text-uppercase">
+              {{ __('Projekti') }}
             </span>
           </a>
         </div> 
