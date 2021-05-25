@@ -359,6 +359,19 @@ body {
       }
     }
 
+    .custom-border-top-radius{
+      border-top-left-radius: 20% 1% !important; 
+      border-top-right-radius: 80% 80% !important;
+    }
+
+    /* Border Radius for Medium Devices and Up */ 
+    @media (min-width: 1192px) { 
+      .custom-border-top-radius{
+        border-top-left-radius: 30% 30% !important; 
+        border-top-right-radius: 30% 70% !important;
+      }
+    }
+
     /* Animated Contact Button */
     .horizontal { 
       position: relative;   
