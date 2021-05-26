@@ -65,7 +65,7 @@
 
   </div> 
 
-  <header class="position-relative w-100 overflow-hidden bg-dark custom-border-radius min-vh-100"> {{-- style="border-end-end-radius: 40%" --}}
+  <header class="position-relative w-100 overflow-hidden bg-dark custom-border-radius" style="min-height: 80vh"> {{-- style="border-end-end-radius: 40%" --}}
     <div class="loading r">
       <div class="loading_line_wrapper">
         <div class="loading_line">
@@ -87,12 +87,12 @@
           <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
         </button>
       </nav>
-      <div class="d-flex justify-content-start align-items-center" style="margin-top: 25vh">
-        <div class="text-honey-dew">
-          <h1 class="display-1 text-uppercase font-weight-semi-bold">
+      <div class="d-flex justify-content-center align-items-center" style="margin-top: 10vh">
+        <div class="text-honey-dew text-center">
+          <h1 class="display-3 text-uppercase font-weight-semi-bold">
             {{ __('Vaš cilj,')}}
           </h1>
-          <h1 class="display-3 mb-0">
+          <h1 class="display-4 mb-0">
             <span class="font-weigt-extra-light">
               {{ __('naša je') }}
             </span>
@@ -101,8 +101,9 @@
             </span>
           </h1>
           <a href="" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
-            <span class="text h3 text-uppercase">
-              {{ __('Projekti') }}
+            <span class="text h5 text-uppercase font-weight-semi-bold">
+              {{ __('Projekti') }} 
+              <i class="fas fa-chevron-right ml-2"></i>
             </span>
           </a>
         </div> 
@@ -136,8 +137,6 @@
       $('body').delay(2000).css({'overflow':'visible'});
   })
 
-  // Aos Init
-  AOS.init();
 </script>
 
 @yield('scripts')

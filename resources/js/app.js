@@ -1,22 +1,13 @@
 require('./bootstrap');
 
+// Import Sweet Alert
 import Swal from 'sweetalert2';
+ 
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle'; 
 
-// window.deleteConfirm = function(formId)
-// {
-//     Swal.fire({
-//         icon: 'warning',
-//         text: 'Jeste li sigurni da želite izbrisati?',
-//         showCancelButton: true,
-//         cancelButtonText: 'Nisam siguran, odustani.',
-//         confirmButtonText: 'Izbriši',
-//         confirmButtonColor: '#e3342f',
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             document.getElementById(formId).submit();
-//         }
-//     });
-// }
+// import Swiper styles
+import 'swiper/swiper-bundle.css';
 
 // Confirm delete dialog
 window.deleteConfirm = function(formId)
@@ -57,3 +48,57 @@ window.deleteConfirm = function(formId)
     }
   })
 } 
+
+// Custom JS
+window.onload = function() {
+  
+  // Swiper Init
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      pauseOnMouseEnter: true,
+      reverseDirection: true,
+    }, 
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 576px
+      390: {
+        slidesPerView: 2,
+        spaceBetween: 0
+      },
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 0
+      },
+      // when window width is >= 750px
+      800: {
+        slidesPerView: 4,
+        spaceBetween: 0
+      },
+      // when window width is >= 950px
+      950: {
+        slidesPerView: 5,
+        spaceBetween: 0
+      }, 
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 0
+      },
+      // when window width is >= 1500px
+      1500: {
+        slidesPerView: 7,
+        spaceBetween: 0
+      }
+    }
+  });
+  
+  // Aos Init
+  AOS.init({
+    once: true,
+  });
+}
