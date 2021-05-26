@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="bg-honey-dew"> 
+<body> 
 
   <!-- Preloader -->
   {{-- <div id="preloader">

@@ -778,7 +778,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: calc(100vw - 20vw);
+    max-width: 1140px;
   }
 }
 .row {
