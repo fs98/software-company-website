@@ -22,7 +22,7 @@
 
 </head>
 
-<body> 
+<body class="bg-light"> 
 
   <!-- Preloader -->
   {{-- <div id="preloader">

@@ -6,6 +6,7 @@
 body {
   font-family: Poppins !important;
   overflow: auto;
+  overflow-x: hidden !important;
 }
 
 :root {
@@ -14,6 +15,7 @@ body {
   --ocean-green: #03a678;
   --tea-green: #c3e8cc;
   --honeydew: #e9f5ec;  
+  --invalid: #f1a9a0;
 }
 
 /**
@@ -135,6 +137,11 @@ body {
       border: 1px solid var(--ocean-green);
       color: var(--ocean-green);
       transition: 1s;
+    }
+
+    /* Letter Spacing */
+    .wide-text {
+      letter-spacing: 1vmin;
     }
 
 /**
@@ -531,4 +538,137 @@ body {
       z-index: -1;
       background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat right bottom scroll; 
       background-size: cover;
+    }
+
+    .icon-background {
+      color: yellow !important;
+    }
+
+    /* Icons Animation */
+    @-webkit-keyframes mover {
+      0% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+        100% { transform: translateY(3px); }
+    }
+    @keyframes mover {
+      0% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+        100% { transform: translateY(3px); }
+    }
+  
+    .services-card i.fa-stack-1x {
+      -webkit-animation: mover 2s infinite  alternate;
+      animation: mover 2s infinite  alternate;
+    }
+
+    /* Cards */
+
+    #servicesSection .card a>span {
+      letter-spacing: 1vmin;
+    }
+
+/*
+** Technologies Section
+*/
+
+    .technologies-row img { 
+      object-fit: contain !important;
+      width: auto;
+      max-width: 100px;
+      filter: grayscale(30%);
+      transition: 0.5s;
+    }
+
+    .technologies-row img:hover {
+      filter: grayscale(0%);
+      transition: 0.5s;
+    }
+
+/**
+* About Us Section
+*/
+
+    #aboutUsSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat right bottom scroll; 
+      background-size: cover;
+      background-color: gainsboro
+    }
+
+/**
+* Contact Section
+*/
+
+    .left-colored-column::after {
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      content: '';
+      width: 360%;
+      background: var(--dark-jungle-green);
+      }
+    .right-colored-column::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      width: 100% !important;
+      content: '';
+      background: var(--honeydew);   
+    }
+
+    /* Form */
+
+    .contact-form .form-group>input,
+    .contact-form .form-group>textarea {
+      border-color: rgba(21, 28, 25, 0.1);
+      border-width: 2px !important; 
+      transition: 0.5s;
+    }
+
+    .contact-form .form-group>input:focus,
+    .contact-form .form-group>textarea:focus {
+      box-shadow: none;
+      color: var(--dark-jungle-green);
+      border-color: var(--bottle-green);
+      transition: 0.5s;
+    }
+
+    .contact-form .form-group>input:invalid,
+    .contact-form .form-group>textarea:invalid {
+      box-shadow: none;
+      color: var(--dark-jungle-green); 
+      border-color: var(--invalid);
+    } 
+
+    .contact-form button:hover { 
+      color: var(--dark-jungle-green);
+      border: 1px solid var(--dark-jungle-green) !important;
+      background-color: transparent;
+      transition: 0.5s;
+    }
+
+    .contact-form button:hover i { 
+      margin-left: 30px !important;
+      transition: 0.5s;
+    }
+
+    .contact-form button i {  
+      transition: 0.5s;
+    }
+
+    .contact-form button {
+      transition: 0.5s;
+      border: 1px solid var(--dark-jungle-green) !important;
+    }
+
+    .contact-form .form-group>textarea {
+      resize: none;
     }
