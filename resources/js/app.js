@@ -56,11 +56,12 @@ window.onload = function() {
   const swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
     spaceBetween: 0,
-    loop: true,
+    loop: true, 
+    speed: 1000,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       pauseOnMouseEnter: true,
-      reverseDirection: true,
+      reverseDirection: true, 
     }, 
     // Responsive breakpoints
     breakpoints: {

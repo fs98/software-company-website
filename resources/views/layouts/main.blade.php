@@ -66,7 +66,7 @@
   </div> 
 
   <header class="position-relative w-100 overflow-hidden bg-dark custom-border-radius" style="min-height: 80vh"> {{-- style="border-end-end-radius: 40%" --}}
-    <div class="loading r">
+    <div class="loading">
       <div class="loading_line_wrapper">
         <div class="loading_line">
           <div class="loading_line_inner loading_line_inner--1"></div>
@@ -78,16 +78,18 @@
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto">
       <source src="https://player.vimeo.com/external/553362038.sd.mp4?s=7102361a0156a3689b83848a7cce9044180a335b&profile_id=164&oauth2_token_id=57447761" type="video/mp4"> 
     </video>
-    <div class="container h-100 position-relative">
-      <nav class="navbar navbar-dark py-5">
+    <div class="container mt-0 pt-0" style="position: fixed; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%)">
+      <nav class="navbar navbar-dark mt-0 pt-5" id="navbar">
         <a class="navbar-brand" href="#">
           <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
         </a>
-        <button onclick="openNav()" class="navbar-toggler text-right border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
+        <button onclick="openNav()" class="navbar-toggler text-right rounded-0 border-0 mt-0 pt-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
           <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
         </button>
       </nav>
-      <div class="d-flex justify-content-center align-items-center" style="margin-top: 10vh">
+    </div>
+    <div class="container h-100">
+      <div class="d-flex justify-content-center align-items-center" style="margin-top: 25vh">
         <div class="text-honey-dew text-center">
           <h1 class="display-3 text-uppercase font-weight-semi-bold">
             {{ __('Vaš cilj,')}}
@@ -109,13 +111,26 @@
         </div> 
       </div>
     </div>
-  </header>
-
-  <style>  
-  </style>
+  </header> 
 
   <main>
     @yield('main')
+  
+    <section id="cookiesNotice">
+
+      <div class="div ml-4 mb-4 w-25 p-5 rounded" style="position: fixed; z-index: 4; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.2)">
+        <h5> 
+          Ova web stranica koristi kolačiće kako bi poboljšala iskustvo i pouzdanost korisnika
+        </h5>
+      </div>
+
+    </section>
+
+    <section>
+      <a href="#" id="scrollToTop" class="mr-4 mb-4 bg-dark-jungle-green scroll-to-top-btn rounded" style="display: none; position: fixed; z-index: 4; right: 0; bottom: 0;">
+        <i class="fas fa-chevron-up fa-2x p-2 text-honey-dew"></i>
+      </a>
+    </section>
   </main>
   
   <footer></footer>
@@ -131,11 +146,43 @@
     document.getElementById("myNav").style.width = "0%";
   }
 
+  // Scroll To Top Function
+  $('#scrollToTop').on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+  });
+
+  // Duplicate code so the offset is checked even when page is refreshed, without scrolling anywhere
+  if ($(document).scrollTop() > 300) {
+    $('#scrollToTop').show(300)
+  } else {
+    $('#scrollToTop').hide(300)
+  };
+
+  /* Sticky Navbar */
+  $(window).scroll(function() {
+    if ($(document).scrollTop() >= $("#navbar").offset().top) {
+      $("#navbar").removeClass("pt-5").addClass("pt-0").css(
+      { 
+        "transition" : "0.5s",
+        "background-color" : "rgba(21,28,25,0.5)"
+      });
+      $("#navbar > a").css("transition", "0.5s").addClass("p-3");
+      $("#navbar > button").css("transition", "0.5s").addClass("p-3")
+    } 
+    
+    if ($(document).scrollTop() > 300) {
+      $('#scrollToTop').show(300)
+    } else {
+      $('#scrollToTop').hide(300)
+    };
+  }); 
+
   /* Preloader */
   $(window).on('load', function() { // makes sure the whole site is loaded  
       $('#preloader').delay(2000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
       $('body').delay(2000).css({'overflow':'visible'});
-  })
+  }) 
 
 </script>
 

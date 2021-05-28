@@ -11,7 +11,8 @@
         <div class="card rounded-0 border-0 shadow" style="height: 18rem; z-index: 4" data-aos="fade-in">
           <div class="card-body position-relative text-center d-flex flex-column justify-content-center">
             <div style="position: absolute; left: 0; top: 0; border-bottom-right-radius: 50%" class="bg-honey-dew py-3 px-4">
-              <i class="fas fa-magic fa-lg text-ocean-green"></i> 
+              {{-- <i class="fas fa-magic fa-lg text-ocean-green"></i>  --}}
+              <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
             </div>
             {{-- <img src="{{ asset('img/icons/plan-and-design.svg') }}" alt="" class="text-center"> --}}  
             <h1 class="card-title text-dark-jungle-green font-weight-bold text-uppercase mt-3">Plan i dizajn</h1> 
@@ -65,7 +66,7 @@
       </div>
       <div class="swiper-slide bg-transparent">
         <a href="">
-          <img src="{{ asset('img/clients/imrex-logo-white.png')}}" alt="client-logo" height="100" width="100">
+          <img src="{{ asset('img/clients/repromaterijal-logo-white.png')}}" alt="client-logo" height="100" width="100">
         </a>
       </div>
       <div class="swiper-slide bg-transparent">
@@ -75,17 +76,7 @@
       </div>
       <div class="swiper-slide bg-transparent">
         <a href="" class="w-auto">
-          <img src="{{ asset('img/clients/bluestars-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <a href="">
-          <img src="{{ asset('img/clients/imrex-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <a href="">
-          <img src="{{ asset('img/clients/limotesla-logo-white.png')}}" alt="client-logo" height="100" width="100">
+          <img src="{{ asset('img/clients/bosnjak-commerce-logo-white.png')}}" alt="client-logo" height="100" width="100">
         </a>
       </div> 
   </div>
@@ -94,8 +85,8 @@
    
 {{-- Services Section --}}
 
-<section class="my-5 py-5 bg-light" id="servicesSection">
-  <div class="container">
+<section class="py-5 position-relative" id="servicesSection">
+  <div class="container my-5">
     <div class="row">
       <div class="col-12 text-center" data-aos="fade-up">
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
@@ -107,20 +98,21 @@
       </div>
     </div>
     <div class="row mt-5 mb-5">
-      <div class="col-12 col-lg-6 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-lg services-card" style="min-height: 20rem">
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center">
-              <span class="fa-stack fa-3x">
+              {{-- <span class="fa-stack fa-3x">
                 <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                 <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
-              </span>
+              </span> --}}
+              <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
               <h3 class="card-title font-weight-bold text-uppercase mt-4">Web dizajn</h3> 
               <p class="card-text text-muted h6 px-4">
                 Katrieldev tim web stranicu vaše tvrtke će pretvoriti u online izlog. 
               </p>
             </div>
-            <a href="#" class="btn float-right rounded-0 bg-dark-jungle-green border-0 py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 py-3 d-none services-button" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
                 Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
@@ -128,22 +120,67 @@
           </div>
         </div>
       </div> 
-      <div class="col-12 col-lg-6 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-lg services-card" style="min-height: 20rem">
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center">
-              <span class="fa-stack fa-3x">
+              {{-- <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
+              </span> --}}
+              <img src="{{ asset('img/icons/gif/1331-repository-outline.gif') }}" alt="">
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">Web development</h3> 
+              <p class="card-text text-muted h6 px-4">
+                Razvijanjem web stranica i aplikacija mi pomažemo klijentima da svijetu ispričaju svoju priču. 
+              </p>
+            </div>
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
+                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div> 
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+          <div class="card-body d-flex justify-content-center align-items-start position-relative">
+            <div class="my-3 text-center">
+              {{-- <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
+              </span> --}}
+              <img src="{{ asset('img/icons/gif/981-consultation-outline.gif') }}" alt="">
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">Start Up</h3> 
+              <p class="card-text text-muted h6 px-4">
+                Fokusirajte se na rast Vašeg poslovanja - za ostalo se brinemo mi. 
+              </p>
+            </div>
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
+                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div> 
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+          <div class="card-body d-flex justify-content-center align-items-start position-relative">
+            <div class="my-3 text-center">
+              {{-- <span class="fa-stack fa-3x">
                 <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                 <i class="fa fa-mobile fa-stack-1x fa-xs text-honey-dew"></i>
-              </span>
+              </span> --}}
+              <img src="{{ asset('img/icons/gif/1326-command-window-line-outline.gif') }}" alt="">
               <h3 class="card-title font-weight-bold text-uppercase mt-4">
                 Izrada mobilnih aplikacija
               </h3> 
               <p class="card-text text-muted h6 px-4">
-                Naš tim će napraviti savršenu mobilnu aplikaciju koja će probiti granice vašeg trenutnog posla 
+                Naš tim će napraviti savršenu mobilnu aplikaciju koja će probiti granice vašeg trenutnog posla.
               </p>
             </div>
-            <a href="#" class="btn float-right rounded-0 bg-dark-jungle-green border-0 py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
                 Više <i class="fas fa-chevron-right ml-2 fa-sm"></i>
               </span>
@@ -151,20 +188,21 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-lg services-card" style="min-height: 20rem">
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center">
-              <span class="fa-stack fa-3x">
+              {{-- <span class="fa-stack fa-3x">
                 <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                 <i class="fa fa-cubes fa-stack-1x fa-xs text-honey-dew"></i>
-              </span>  
+              </span>   --}}
+              <img src="{{ asset('img/icons/gif/1378-3-d-outline.gif') }}" alt="">
               <h3 class="card-title font-weight-bold text-uppercase mt-4">3D Konfigurator</h3> 
               <p class="card-text text-muted h6 px-4">
-                Katrieldev tim web stranicu vaše tvrtke će pretvoriti u online izlog. 
+                3D konfigurator pomaže vašim kupcima da kreiraju prilagođene proizvode u skladu sa njihovim željama i ukusom.
               </p>
             </div>
-            <a href="#" class="btn float-right rounded-0 bg-dark-jungle-green border-0 py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
                 Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
@@ -172,20 +210,21 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-lg services-card" style="min-height: 20rem">
+      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center">
-              <span class="fa-stack fa-3x">
+              {{-- <span class="fa-stack fa-3x">
                 <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                 <i class="fa fa-shopping-cart fa-stack-1x fa-xs text-honey-dew"></i>
-              </span>
+              </span> --}}
+              <img src="{{ asset('img/icons/gif/139-basket-outline.gif') }}" alt="">
               <h3 class="card-title font-weight-bold text-uppercase mt-4">Web shop</h3> 
               <p class="card-text text-muted h6 px-4">
-                Katrieldev tim web stranicu vaše tvrtke će pretvoriti u online izlog. 
+                Izbrišite granice i vrata svoje trgovine otvorite cijelom svijetu.
               </p>
             </div>
-            <a href="#" class="btn float-right rounded-0 bg-dark-jungle-green border-0 py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+            <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
                 Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
@@ -344,7 +383,7 @@
 <section class="bg-dark-jungle-green position-relative" id="contactSection">
   <div class="container">
     <div class="row">
-      <div class="col-12 left-colored-column py-5 bg-dark-jungles-green col-lg-6">
+      <div class="col-12 left-colored-column py-5 bg-dark-jungle-green col-lg-6">
       
         <section class="my-5">
           <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
@@ -388,7 +427,7 @@
               info@katrieldev.com
             </span>
           </div>
-        </section>
+        </section> 
         
       </div>
       <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-end align-items-center">
@@ -424,15 +463,14 @@
 </section> 
 
 {{-- Bottom Footer --}}
-<section class="bg-ocean-green">
+<section class="bg-white">
   <div class="container">
     <div class="row py-3">
+      <div class="col-12 text-center">
+        <a href="" class="text-muted text-decoration-none font-weight-light">Privacy Policy</a>
+      </div>
       <div class="col-12 text-center font-weight-normal">
-        Copyright &copy; 
-        <span class="font-weight-semi-bold">
-          KatrielDev
-        </span> 
-        {{ now()->year }}
+        KatrielDev {{ now()->year }} | Sva prava pridržana
       </div>
     </div>
   </div>
@@ -452,7 +490,7 @@ $(window).scroll(function() {
       $(this).prop('Counter',0).animate({
           Counter: $(this).text()
       }, {
-          duration: 1500,
+          duration: 2500,
           easing: 'swing',
           step: function (now) {
               $(this).text(Math.ceil(now));
@@ -462,6 +500,14 @@ $(window).scroll(function() {
     counted = 1;
   }
 
+});
+
+$(".services-card").hover(function(){
+  $(this).css("transition", "0.3s").addClass("shadow-lg");
+  $(this).find('a').fadeIn(200).removeClass("d-none");
+  }, function(){
+    $(this).css("transition", "0.3s").removeClass("shadow-lg");
+    $(this).find('a').fadeOut(200).addClass("d-none");
 });
 </script>
 @endsection
