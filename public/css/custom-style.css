@@ -172,6 +172,9 @@ body {
 /**
 * Full Screen Navbar 
 */
+    #navbar {
+      transition: 0.5s;
+    }
 
     /* The Overlay (background) */
     .overlay {
@@ -446,7 +449,7 @@ body {
       height: 100%;
       transform-origin: 100% 0%;
       animation: kf_loading_line 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s infinite;
-      
+    }
       .loading_line_inner {
         position: absolute;
         top: 0px;
@@ -458,7 +461,6 @@ body {
         background: #000;
         transform-origin: 0% 0%;
       }
-    }
 
     .loading_line_inner--1 {
       opacity: 0;  /* change for inner line opacity, currently 0/hidden */
@@ -612,25 +614,19 @@ body {
 /**
 * Contact Section
 */
-
-    .left-colored-column::after {
-      position: absolute;
-      top: 0;
-      right: 100%;
-      bottom: 0;
-      content: '';
-      width: 360%;
-      background: var(--dark-jungle-green);
+ 
+    @media (min-width: 992px) { 
+      #contactSection{
+        background: linear-gradient(
+          to right, 
+          var(--dark-jungle-green) 0%, 
+          var(--dark-jungle-green) 50%, 
+          var(--honeydew) 50%, 
+          var(--honeydew) 100%
+        );
       }
-    .right-colored-column::after {
-      position: absolute;
-      top: 0;
-      left: 100%;
-      bottom: 0;
-      width: 100% !important;
-      content: '';
-      background: var(--honeydew);   
-    }
+     }
+
 
     /* Form */
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\LanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Auth::routes(['register' => false]);
 Route::get('/home', [UserController::class, 'index'])->name('home');
 
 Route::resource('/users', UserController::class);
+
+Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])->name('lang.switch');

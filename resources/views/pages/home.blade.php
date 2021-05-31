@@ -90,10 +90,10 @@
     <div class="row">
       <div class="col-12 text-center" data-aos="fade-up">
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-          {{ __('Naše usluge')}}
+          {{ __('our services')}}
         </h6>
         <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
-          {{ __('Specijalizirali smo')}}
+          {{ __('We specialized in')}}
         </h1>
       </div>
     </div>
@@ -101,20 +101,16 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
-              </span> --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">Web dizajn</h3> 
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Web Design') }}</h3> 
               <p class="card-text text-muted h6 px-4">
-                Katrieldev tim web stranicu vaše tvrtke će pretvoriti u online izlog. 
+                {{ __('Katrieldev\'s team will turn your company\'s website into an online showcase.') }}
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 py-3 d-none services-button" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -123,20 +119,16 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
-              </span> --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1331-repository-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">Web development</h3> 
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Web development') }}</h3> 
               <p class="card-text text-muted h6 px-4">
-                Razvijanjem web stranica i aplikacija mi pomažemo klijentima da svijetu ispričaju svoju priču. 
+                {{ __('By developing websites and applications, we help our clients to tell te world their story.')}} 
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -145,20 +137,16 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-magic fa-stack-1x fa-xs text-honey-dew"></i>
-              </span> --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/981-consultation-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">Start Up</h3> 
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Start Up') }}</h3> 
               <p class="card-text text-muted h6 px-4">
-                Fokusirajte se na rast Vašeg poslovanja - za ostalo se brinemo mi. 
+                {{ __('Focus on growing your bussiness - we take care of the rest') }} 
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -167,22 +155,18 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-mobile fa-stack-1x fa-xs text-honey-dew"></i>
-              </span> --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1326-command-window-line-outline.gif') }}" alt="">
               <h3 class="card-title font-weight-bold text-uppercase mt-4">
-                Izrada mobilnih aplikacija
+                {{ __('Mobile Apps Development') }}
               </h3> 
               <p class="card-text text-muted h6 px-4">
-                Naš tim će napraviti savršenu mobilnu aplikaciju koja će probiti granice vašeg trenutnog posla.
+                {{ __('Our team is going to make you a perfect smartphone application that will push the boundaries of your current bussiness.') }}
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-2 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-2 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -191,20 +175,18 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-cubes fa-stack-1x fa-xs text-honey-dew"></i>
-              </span>   --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1378-3-d-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">3D Konfigurator</h3> 
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">
+                {{ __('3d Configurator') }}
+              </h3> 
               <p class="card-text text-muted h6 px-4">
-                3D konfigurator pomaže vašim kupcima da kreiraju prilagođene proizvode u skladu sa njihovim željama i ukusom.
+                {{ __('Our 3D configurator helps your customers to create custom products according to their wishes and tastes.') }}
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -213,20 +195,18 @@
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
         <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center">
-              {{-- <span class="fa-stack fa-3x">
-                <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                <i class="fa fa-shopping-cart fa-stack-1x fa-xs text-honey-dew"></i>
-              </span> --}}
+            <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/139-basket-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">Web shop</h3> 
+              <h3 class="card-title font-weight-bold text-uppercase mt-4">
+                {{ __('Web Shop') }}  
+              </h3> 
               <p class="card-text text-muted h6 px-4">
-                Izbrišite granice i vrata svoje trgovine otvorite cijelom svijetu.
+                {{ __('Erase the boundaries and open the doors of your store to the whole world!') }}
               </p>
             </div>
             <a href="#" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
               <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                Više <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
               </span>
             </a>
           </div>
@@ -243,10 +223,10 @@
     <div class="row my-5">
       <div class="col-12 text-center" data-aos="fade-up">
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-          {{ __('Tehnologije')}}
+          {{ __('Technologies')}}
         </h6>
         <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
-          {{ __('Naše usluge')}}
+          {{ __('Our Services')}}
         </h1>
       </div>
     </div>
@@ -343,10 +323,10 @@
     <div class="row my-5">
       <div class="col-12 text-center" data-aos="fade-up">
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-          {{ __('upoznajte nas')}}
+          {{ __('Meet Us')}}
         </h6>
         <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
-          {{ __('Ukratko o nama')}}
+          {{ __('Short Summary')}}
         </h1>
       </div>
     </div>
@@ -354,46 +334,46 @@
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
           <h1 class="font-weight-bold"><span class="count">8</span> +</h1>
-          <h5 class="font-weight-light">godina postojanja</h5>
+          <h5 class="font-weight-light">{{ __('years of existing') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div>
           <h1 class="font-weight-bold"><span class="count">100</span> +</h1>
-          <h5 class="font-weight-light">uspješnih priča</h5>
+          <h5 class="font-weight-light">{{ __('successful stories') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
           <h1 class="font-weight-bold"><span class="count">200</span> +</h1>
-          <h5 class="font-weight-light">sklopljenih prijateljstava</h5>
+          <h5 class="font-weight-light">{{ __('friendships made') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
           <h1><i class="fas fa-infinity"></i></h1>
-          <h5 class="font-weight-light">linija koda</h5>
+          <h5 class="font-weight-light">{{ __('lines of code') }}</h5>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section>  
 
 {{-- Next Section --}}
-<section class="bg-dark-jungle-green position-relative" id="contactSection">
-  <div class="container">
+<section class="position-relative bg-dark-jungle-green" id="contactSection">
+  <div class="container" style="overflow-x: hidden">
     <div class="row">
-      <div class="col-12 left-colored-column py-5 bg-dark-jungle-green col-lg-6">
+      <div class="col-12 text-md-left text-center py-5 bg-dark-jungle-green col-lg-6">
       
-        <section class="my-5">
+        <section class="my-5 text-md-left text-center">
           <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-            {{ __('kontaktirajte nas')}}
+            {{ __('Contact Us')}}
           </h6>
           <h1 class="font-weight-semi-bold text-tea-green h1 mt-3">
-            {{ __('Imate li neku ideju?')}}
+            {{ __('Do you have an idea?')}}
           </h1>
           <h4 class="font-weight-extra-light text-honey-dew h4 mt-3">
-            {{ __('Pomoći ćemo Vam da je realizujete!')}}
+            {{ __('We are going to help you make it come true!')}}
           </h4> 
   
           <div class="mt-5 d-flex align-items-center">
@@ -404,7 +384,7 @@
             <span class="text-honey-dew font-weight-light ml-3">
               Donje Putićevo 109, 72270 Travnik
               <br>
-              Bosna i Hercegovina
+              {{ __('Bosnia and Herzegovina') }}
             </span>
           </div>   
           
@@ -430,30 +410,35 @@
         </section> 
         
       </div>
-      <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-end align-items-center">
+      <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-center justify-content-lg-end align-items-center" style="overflow-y: hidden">
+        <span class="right-color-column"></span> 
         <form class="contact-form" style="width: 90%">
           <div class="form-group"> 
-            <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="Ime"> 
+            <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="{{ __('Name') }}"> 
           </div>
           <div class="form-group"> 
             <input type="email" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="email" placeholder="Email">
           </div>
           <div class="form-group"> 
-            <input type="text" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="phone" placeholder="Telefon">
+            <input type="text" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="phone" placeholder="{{ __('Phone') }}">
           </div>
           <div class="form-group"> 
-            <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="Poruka" id="poruka"></textarea>
+            <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="{{ __('Message') }}" id="poruka"></textarea>
           </div> 
           <h6 class="small mt-4">
             <span>
-              Your details will not be shared with any third party.
+              {{ __('Your details will not be shared with any third party.') }}
             </span> 
             <span>
-              <a href="" class="text-ocean-green">Privacy Policy</a>
+              <a href="" class="text-ocean-green">
+                {{ __('Privacy Policy') }}
+              </a>
             </span> 
           </h6>
           <button type="submit" class="btn mt-3 rounded-0 bg-dark-jungle-green text-honey-dew text-uppercase px-5 py-3"> 
-            <span class="h6 font-weight-semi-bold">Pošalji</span> 
+            <span class="h6 font-weight-semi-bold">
+              {{ __('Send') }}  
+            </span> 
             <i class="fas fa-chevron-right ml-3 fa-sm"></i>
           </button>
         </form>
@@ -467,10 +452,12 @@
   <div class="container">
     <div class="row py-3">
       <div class="col-12 text-center">
-        <a href="" class="text-muted text-decoration-none font-weight-light">Privacy Policy</a>
+        <a href="" class="text-muted text-decoration-none font-weight-light">
+          {{ __('Privacy Policy') }}
+        </a>
       </div>
       <div class="col-12 text-center font-weight-normal">
-        KatrielDev {{ now()->year }} | Sva prava pridržana
+        KatrielDev {{ now()->year }} | {{ __('All Rights Reserved') }}
       </div>
     </div>
   </div>

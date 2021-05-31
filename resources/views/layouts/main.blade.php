@@ -43,23 +43,27 @@
     <!-- Overlay content -->
     <div class="overlay-content">
       <a href="#" class="{{ Route::currentRouteNamed('public-home') ? "active" : "" }}">
-        {{ __('Početna') }}
+        {{ __('Home') }}
       </a>
       <a href="#">
-        {{ __('O nama') }}
+        {{ __('About Us') }}
       </a>
       <a href="#">
-        {{ __('Servisi') }}
+        {{ __('Services') }}
       </a>
       <a href="#">
-        {{ __('Kontakt') }}
+        {{ __('Contact') }}
       </a>
       <div style="display: inline-block">
-        <a href="" class="d-inline">BHS</a> 
-        <span class="lang-separator">|</span>
-        <a href="" class="d-inline">DE</a> 
-        <span class="lang-separator">|</span>
-        <a href="" class="d-inline">EN</a> 
+        <a href="" class="d-inline active text-uppercase">{{ Config::get('languages')[App::getLocale()]['display'] }}</a> 
+        @foreach (Config::get('languages') as $lang => $language) 
+            @if ($lang != App::getLocale())
+              <span class="lang-separator">|</span>
+              <a href="{{ route('lang.switch', $lang) }}" class="d-inline">{{ strtoupper($language['display']) }}</a>
+            @endif
+        @endforeach  
+      </div>
+      <div> 
       </div>
     </div>
 
@@ -92,19 +96,19 @@
       <div class="d-flex justify-content-center align-items-center" style="margin-top: 25vh">
         <div class="text-honey-dew text-center">
           <h1 class="display-3 text-uppercase font-weight-semi-bold">
-            {{ __('Vaš cilj,')}}
+            {{ __('your goal')}},
           </h1>
           <h1 class="display-4 mb-0">
             <span class="font-weigt-extra-light">
-              {{ __('naša je') }}
+              {{ __('is our') }}
             </span>
             <span class="text-uppercase font-weight-bold text-ocean-green">
-              {{ __('Motivacija!') }}
+              {{ __('motivation') }}!
             </span>
           </h1>
           <a href="" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
             <span class="text h5 text-uppercase font-weight-semi-bold">
-              {{ __('Projekti') }} 
+              {{ __('projects') }} 
               <i class="fas fa-chevron-right ml-2"></i>
             </span>
           </a>
@@ -117,12 +121,24 @@
     @yield('main')
   
     <section id="cookiesNotice">
-
-      <div class="div ml-4 mb-4 w-25 p-5 rounded" style="position: fixed; z-index: 4; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.2)">
-        <h5> 
-          Ova web stranica koristi kolačiće kako bi poboljšala iskustvo i pouzdanost korisnika
-        </h5>
-      </div>
+  
+        <div id="cookieAlert" class="alert border-0 alert-dismissible rounded-0 fade text-center show p-5 ml-3 mb-3" role="alert"  data-aos="zoom-left-up" style="background-color: rgba(3,166,120,0.88);  position: fixed; z-index: 4; left: 0; bottom: 0; height: auto; width: 300px;">
+          <div>
+            <img src="{{ asset('img/icons/cookie-svgrepo-com.svg') }}" alt="cookies" height="60" width="60">
+            <h3 class="font-weight-bold mt-3">
+              {{ __('Have a cookie!') }}
+            </h3>
+            <h6 class="text-center font-weight-normal text-dark-jungle-green mt-1">
+              {{ __('We use cookies to improve user experience and reliability.') }}
+            </h6>
+            <a href="#" class="small text-muted text-decoration-none" style="display: none">
+              {{ __('Privacy Policy')}}
+            </a>
+          </div>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> 
 
     </section>
 
@@ -160,16 +176,36 @@
   };
 
   /* Sticky Navbar */
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+ 
+
+  var previousScrollPosition = $(window).scrollTop();
   $(window).scroll(function() {
-    if ($(document).scrollTop() >= $("#navbar").offset().top) {
+    var currentScrollPosition = $(window).scrollTop();
+    if (previousScrollPosition > currentScrollPosition) {
       $("#navbar").removeClass("pt-5").addClass("pt-0").css(
       { 
-        "transition" : "0.5s",
-        "background-color" : "rgba(21,28,25,0.5)"
+        "background-color" : "rgba(21,28,25,0.5)",
+        "top" : "0"
       });
       $("#navbar > a").css("transition", "0.5s").addClass("p-3");
       $("#navbar > button").css("transition", "0.5s").addClass("p-3")
-    } 
+    } else {
+      $("#navbar").css({
+        "top" : "-100px",
+      });
+    }
+    previousScrollPosition = currentScrollPosition;
+
+    if (currentScrollPosition == 0) {
+      $("#navbar").addClass("pt-5").removeClass("pt-0").css(
+      { 
+        "background-color" : "transparent",
+        "top" : "0"
+      });
+      $("#navbar > a").css("transition", "0.5s").removeClass("p-3");
+      $("#navbar > button").css("transition", "0.5s").removeClass("p-3")
+    }
     
     if ($(document).scrollTop() > 300) {
       $('#scrollToTop').show(300)
@@ -183,6 +219,13 @@
       $('#preloader').delay(2000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
       $('body').delay(2000).css({'overflow':'visible'});
   }) 
+
+  /* Cookie Alert */
+  $('#cookieAlert').hover(function(){
+    $(this).find('a').fadeIn(1000);
+  }, function(){
+    $(this).find('a').fadeOut(1000);
+  })
 
 </script>
 
