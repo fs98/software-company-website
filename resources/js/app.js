@@ -67,32 +67,32 @@ window.onload = function() {
     breakpoints: {
       // when window width is >= 576px
       390: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 0
       },
       // when window width is >= 576px
       576: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 0
       },
       // when window width is >= 750px
       800: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 0
       },
       // when window width is >= 950px
       950: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 0
       }, 
       // when window width is >= 1200px
       1200: {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 0
       },
       // when window width is >= 1500px
       1500: {
-        slidesPerView: 7,
+        slidesPerView: 6,
         spaceBetween: 0
       }
     }

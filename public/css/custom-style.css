@@ -73,6 +73,7 @@ body {
     }
 
     /* Text colors */
+
     .text-dark-jungle-green{
       color: var(--dark-jungle-green);
     }
@@ -124,6 +125,7 @@ body {
     }
 
     /* Buttons */
+
     .btn-outline-honey-dew
     {
       background-color: transparent;
@@ -140,14 +142,15 @@ body {
     }
 
     /* Letter Spacing */
+
     .wide-text {
       letter-spacing: 1vmin;
     }
 
-/**
-* Font weight 
-* Font Weight Classes 300 - light, 400 - normal and 700 - bold Already Exist
-*/ 
+    /**
+    * Font weight 
+    * Font Weight Classes 300 - light, 400 - normal and 700 - bold Already Exist
+    */ 
   
     .font-weight-extra-light
     {
@@ -159,15 +162,47 @@ body {
       font-weight: 600;
     }
 
-/**
-* Borders
-*/
+    /**
+    * Borders
+    */
 
     .border-top-thick
     {
       border-top: 4px solid var(--ocean-green);
     }
  
+/**
+* Cookies Consent
+*/
+
+    /* Extra Small Devices */
+    #cookieAlert {
+      background-color: rgba(3,166,120,0.88);  
+      position: fixed; 
+      z-index: 4; 
+      left: 0; 
+      bottom: 0; 
+      height: 320px; 
+      width: 100%;
+      max-width: 100%;
+      transition: 0.5s;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+
+    /* Small Devices and Up */
+    @media (min-width: 576px) { 
+      #cookieAlert {    
+        height: 320px; 
+        width: 320px;  
+        margin-left: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    #cookieAlert:hover {
+      transition: 0.5s;
+    }
 
 /**
 * Full Screen Navbar 
@@ -400,11 +435,11 @@ body {
     .swiper-slide img {
       display: block; 
       object-fit: contain;
-      width: 200px;
+      width: 200px; 
       filter: brightness(70%);
     }
 
-    .swiper-slide img:hover {
+    .swiper-slide img:hover { 
       filter: brightness(40%);
       transition: 1s;
     }

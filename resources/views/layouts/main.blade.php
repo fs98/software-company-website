@@ -34,6 +34,11 @@
     </div>
   </div> --}}
 
+  <section id="cookiesNotice">
+    {{-- Cookie Consent --}}
+    @include('cookie-consent::index')
+  </section>
+
   <!-- The Overlay Navbar -->
   <div id="myNav" class="overlay">
 
@@ -118,29 +123,7 @@
   </header> 
 
   <main>
-    @yield('main')
-  
-    <section id="cookiesNotice">
-  
-        <div id="cookieAlert" class="alert border-0 alert-dismissible rounded-0 fade text-center show p-5 ml-3 mb-3" role="alert"  data-aos="zoom-left-up" style="background-color: rgba(3,166,120,0.88);  position: fixed; z-index: 4; left: 0; bottom: 0; height: auto; width: 300px;">
-          <div>
-            <img src="{{ asset('img/icons/cookie-svgrepo-com.svg') }}" alt="cookies" height="60" width="60">
-            <h3 class="font-weight-bold mt-3">
-              {{ __('Have a cookie!') }}
-            </h3>
-            <h6 class="text-center font-weight-normal text-dark-jungle-green mt-1">
-              {{ __('We use cookies to improve user experience and reliability.') }}
-            </h6>
-            <a href="#" class="small text-muted text-decoration-none" style="display: none">
-              {{ __('Privacy Policy')}}
-            </a>
-          </div>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> 
-
-    </section>
+    @yield('main') 
 
     <section>
       <a href="#" id="scrollToTop" class="mr-4 mb-4 bg-dark-jungle-green scroll-to-top-btn rounded" style="display: none; position: fixed; z-index: 4; right: 0; bottom: 0;">
@@ -149,7 +132,113 @@
     </section>
   </main>
   
-  <footer></footer>
+  <footer>
+
+    {{-- Contact Section --}}
+    <section class="position-relative bg-dark-jungle-green" id="contactSection">
+      <div class="container" style="overflow-x: hidden">
+        <div class="row">
+          <div class="col-12 text-md-left text-center py-5 bg-dark-jungle-green col-lg-6">
+          
+            <section class="my-5 text-md-left text-center">
+              <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
+                {{ __('Contact Us')}}
+              </h6>
+              <h1 class="font-weight-semi-bold text-tea-green h1 mt-3">
+                {{ __('Do you have an idea?')}}
+              </h1>
+              <h4 class="font-weight-extra-light text-honey-dew h4 mt-3">
+                {{ __('We are going to help you make it come true!')}}
+              </h4> 
+      
+              <div class="mt-5 d-flex align-items-center">
+                <span class="fa-stack fa-1x">
+                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                  <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
+                </span>
+                <span class="text-honey-dew font-weight-light ml-3">
+                  Donje Putićevo 109, 72270 Travnik
+                  <br>
+                  {{ __('Bosnia and Herzegovina') }}
+                </span>
+              </div>   
+              
+              <div class="mt-3 d-flex align-items-center">
+                <span class="fa-stack fa-1x">
+                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                  <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
+                </span>
+                <span class="text-honey-dew font-weight-light ml-3">
+                  +387 30 555 666
+                </span>
+              </div>
+      
+              <div class="mt-4 d-flex align-items-center">
+                <span class="fa-stack fa-1x">
+                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
+                </span>
+                <span class="text-honey-dew font-weight-light ml-3">
+                  info@katrieldev.com
+                </span>
+              </div>
+            </section> 
+            
+          </div>
+          <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-center justify-content-lg-end align-items-center" style="overflow-y: hidden">
+            <span class="right-color-column"></span> 
+            <form class="contact-form" style="width: 90%">
+              <div class="form-group"> 
+                <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="{{ __('Name') }}"> 
+              </div>
+              <div class="form-group"> 
+                <input type="email" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="email" placeholder="Email">
+              </div>
+              <div class="form-group"> 
+                <input type="text" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="phone" placeholder="{{ __('Phone') }}">
+              </div>
+              <div class="form-group"> 
+                <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="{{ __('Message') }}" id="poruka"></textarea>
+              </div> 
+              <h6 class="small mt-4">
+                <span>
+                  {{ __('Your details will not be shared with any third party.') }}
+                </span> 
+                <span>
+                  <a href="" class="text-ocean-green">
+                    {{ __('Privacy Policy') }}
+                  </a>
+                </span> 
+              </h6>
+              <button type="submit" class="btn mt-3 rounded-0 bg-dark-jungle-green text-honey-dew text-uppercase px-5 py-3"> 
+                <span class="h6 font-weight-semi-bold">
+                  {{ __('Send') }}  
+                </span> 
+                <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    {{-- Bottom Footer --}}
+    <section class="bg-white">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 text-center">
+            <a href="" class="text-muted text-decoration-none font-weight-light">
+              {{ __('Privacy Policy') }}
+            </a>
+          </div>
+          <div class="col-12 text-center font-weight-normal">
+            KatrielDev {{ now()->year }} | {{ __('All Rights Reserved') }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </footer>
 
 <script>
   /* Open when someone clicks on the span element */
@@ -222,9 +311,9 @@
 
   /* Cookie Alert */
   $('#cookieAlert').hover(function(){
-    $(this).find('a').fadeIn(1000);
+    $(this).find('.privacy-policy-link').fadeIn(1000);
   }, function(){
-    $(this).find('a').fadeOut(1000);
+    $(this).find('.privacy-policy-link').fadeOut(1000);
   })
 
 </script>

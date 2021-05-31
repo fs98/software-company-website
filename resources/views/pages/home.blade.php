@@ -78,7 +78,23 @@
         <a href="" class="w-auto">
           <img src="{{ asset('img/clients/bosnjak-commerce-logo-white.png')}}" alt="client-logo" height="100" width="100">
         </a>
-      </div> 
+      </div>
+      <div class="swiper-slide bg-transparent">
+        <a href="" class="w-auto">
+          <img src="{{ asset('img/clients/scu.png')}}" alt="client-logo" height="100" width="100">
+        </a>
+      </div>
+      <div class="swiper-slide bg-transparent">
+        <a href="" class="w-auto">
+          <img src="{{ asset('img/clients/villa.png')}}" alt="client-logo" height="100" width="100">
+        </a>
+      </div>
+      <div class="swiper-slide bg-transparent">
+        <a href="" class="w-auto">
+          <img src="{{ asset('img/clients/sucasa.png')}}" alt="client-logo" height="100" width="100">
+        </a>
+      </div>
+    </div>   
   </div>
 </section>
  
@@ -231,7 +247,7 @@
       </div>
     </div>
 
-    <div class="row pt-5 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-7 technologies-row" data-aos="fade-up">
+    <div class="row pt-5 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-7 technologies-row justify-content-center" data-aos="fade-up">
       <div class="col text-center pb-5">
         <img src="{{ asset('img/icons/Java-Logo.png') }}" class="img-fluid" alt="" width="90">
       </div>
@@ -358,110 +374,6 @@
     </div>
   </div>
 </section>  
-
-{{-- Next Section --}}
-<section class="position-relative bg-dark-jungle-green" id="contactSection">
-  <div class="container" style="overflow-x: hidden">
-    <div class="row">
-      <div class="col-12 text-md-left text-center py-5 bg-dark-jungle-green col-lg-6">
-      
-        <section class="my-5 text-md-left text-center">
-          <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-            {{ __('Contact Us')}}
-          </h6>
-          <h1 class="font-weight-semi-bold text-tea-green h1 mt-3">
-            {{ __('Do you have an idea?')}}
-          </h1>
-          <h4 class="font-weight-extra-light text-honey-dew h4 mt-3">
-            {{ __('We are going to help you make it come true!')}}
-          </h4> 
-  
-          <div class="mt-5 d-flex align-items-center">
-            <span class="fa-stack fa-1x">
-              <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-              <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
-            </span>
-            <span class="text-honey-dew font-weight-light ml-3">
-              Donje Putićevo 109, 72270 Travnik
-              <br>
-              {{ __('Bosnia and Herzegovina') }}
-            </span>
-          </div>   
-          
-          <div class="mt-3 d-flex align-items-center">
-            <span class="fa-stack fa-1x">
-              <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-              <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
-            </span>
-            <span class="text-honey-dew font-weight-light ml-3">
-              +387 30 555 666
-            </span>
-          </div>
-  
-          <div class="mt-4 d-flex align-items-center">
-            <span class="fa-stack fa-1x">
-              <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-              <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
-            </span>
-            <span class="text-honey-dew font-weight-light ml-3">
-              info@katrieldev.com
-            </span>
-          </div>
-        </section> 
-        
-      </div>
-      <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-center justify-content-lg-end align-items-center" style="overflow-y: hidden">
-        <span class="right-color-column"></span> 
-        <form class="contact-form" style="width: 90%">
-          <div class="form-group"> 
-            <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="{{ __('Name') }}"> 
-          </div>
-          <div class="form-group"> 
-            <input type="email" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="email" placeholder="Email">
-          </div>
-          <div class="form-group"> 
-            <input type="text" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="phone" placeholder="{{ __('Phone') }}">
-          </div>
-          <div class="form-group"> 
-            <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="{{ __('Message') }}" id="poruka"></textarea>
-          </div> 
-          <h6 class="small mt-4">
-            <span>
-              {{ __('Your details will not be shared with any third party.') }}
-            </span> 
-            <span>
-              <a href="" class="text-ocean-green">
-                {{ __('Privacy Policy') }}
-              </a>
-            </span> 
-          </h6>
-          <button type="submit" class="btn mt-3 rounded-0 bg-dark-jungle-green text-honey-dew text-uppercase px-5 py-3"> 
-            <span class="h6 font-weight-semi-bold">
-              {{ __('Send') }}  
-            </span> 
-            <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section> 
-
-{{-- Bottom Footer --}}
-<section class="bg-white">
-  <div class="container">
-    <div class="row py-3">
-      <div class="col-12 text-center">
-        <a href="" class="text-muted text-decoration-none font-weight-light">
-          {{ __('Privacy Policy') }}
-        </a>
-      </div>
-      <div class="col-12 text-center font-weight-normal">
-        KatrielDev {{ now()->year }} | {{ __('All Rights Reserved') }}
-      </div>
-    </div>
-  </div>
-</section>
 
 @endsection
 
