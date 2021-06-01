@@ -16,6 +16,8 @@ body {
   --tea-green: #c3e8cc;
   --honeydew: #e9f5ec;  
   --invalid: #f1a9a0;
+  --swiper-navigation-size: 20px;
+  --swiper-theme-color: #151c19;
 }
 
 /**
@@ -340,7 +342,7 @@ body {
 
     /* Video header */ 
 
-    header video {
+    #heroDiv video {
       position: absolute;
       top: 50%;
       left: 50%;  
@@ -351,12 +353,12 @@ body {
       transform: translateX(-50%) translateY(-50%);
     }
 
-    header .container {
+    #heroDiv .container {
       position: relative;
       z-index: 2;
     }
 
-    header .overlay {
+    #heroDiv .overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -723,3 +725,104 @@ body {
       opacity: 1;
       transition: 0.5s;
     }
+
+/**
+* Image Section
+*/
+
+    #imageSection {
+      background-color: rgba(21, 28, 25, 0.6);
+    }
+
+    #imageSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center  40% scroll; 
+      background-size: cover;
+    }
+
+/**
+* What Makes Us Special Section
+*/ 
+
+    #whatMakesUsSpecial::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat center center scroll; 
+      background-size: cover;
+    }
+
+/**
+* Portfolio Section
+*/
+
+    #portfolioSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat center center scroll; 
+      background-size: cover;
+    }
+
+    /**
+    * Portfolio Swiper
+    */
+
+    .portfolio-swiper-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .portfolio-swiper-slide img {
+      object-fit: contain;
+      object-position: center;
+      height: auto;
+      width: 100%;
+      filter: none;
+    }
+
+    .portfolio-swiper-slide img:hover {
+      filter: none;
+    }
+
+    .portfolio-swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff; 
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    
+    .portfolio-swiper-slide {
+      width: 80%;
+      height: 100%;
+    } 

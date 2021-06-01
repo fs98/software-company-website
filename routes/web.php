@@ -16,7 +16,9 @@ use App\Http\Controllers\LanguageController;
 |
 */
 
-Route::get('/', [NavigationController::class, 'index'])->name('public-home');
+Route::get('/', [NavigationController::class, 'index'])->name('public.home');
+Route::get('/about-us', [NavigationController::class, 'about'])->name('public.about-us');
+Route::get('/porfolio', [NavigationController::class, 'porfolio'])->name('public.portfolio');
 
 Auth::routes(['register' => false]);
 

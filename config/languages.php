@@ -13,7 +13,7 @@ return [
     */
 
     'ba' => [
-      'display' => 'ba',
+      'display' => 'bhs',
       'language' => 'Bosanski'
     ],
     'de' => [

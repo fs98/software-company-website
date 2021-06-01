@@ -53,7 +53,7 @@ window.deleteConfirm = function(formId)
 window.onload = function() {
   
   // Swiper Init
-  const swiper = new Swiper(".swiper-container", {
+  const referencesSwiper = new Swiper(".references-swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true, 
@@ -96,6 +96,16 @@ window.onload = function() {
         spaceBetween: 0
       }
     }
+  });
+
+  var portfolioSwiper = new Swiper(".porfolio-swiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
   
   // Aos Init

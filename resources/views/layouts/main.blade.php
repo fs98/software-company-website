@@ -39,94 +39,51 @@
     @include('cookie-consent::index')
   </section>
 
-  <!-- The Overlay Navbar -->
-  <div id="myNav" class="overlay">
+  <header>
+      <!-- The Overlay Navbar -->
+      <div id="myNav" class="overlay">
 
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a href="#" class="{{ Route::currentRouteNamed('public-home') ? "active" : "" }}">
-        {{ __('Home') }}
-      </a>
-      <a href="#">
-        {{ __('About Us') }}
-      </a>
-      <a href="#">
-        {{ __('Services') }}
-      </a>
-      <a href="#">
-        {{ __('Contact') }}
-      </a>
-      <div style="display: inline-block">
-        <a href="" class="d-inline active text-uppercase">{{ Config::get('languages')[App::getLocale()]['display'] }}</a> 
-        @foreach (Config::get('languages') as $lang => $language) 
-            @if ($lang != App::getLocale())
-              <span class="lang-separator">|</span>
-              <a href="{{ route('lang.switch', $lang) }}" class="d-inline">{{ strtoupper($language['display']) }}</a>
-            @endif
-        @endforeach  
-      </div>
-      <div> 
-      </div>
-    </div>
-
-  </div> 
-
-  <header class="position-relative w-100 overflow-hidden bg-dark custom-border-radius" style="min-height: 80vh"> {{-- style="border-end-end-radius: 40%" --}}
-    <div class="loading">
-      <div class="loading_line_wrapper">
-        <div class="loading_line">
-          <div class="loading_line_inner loading_line_inner--1"></div>
-          <div class="loading_line_inner loading_line_inner--2"></div>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          @if (Route::has('public.home'))
+            <a href="{{ route('public.home') }}" class="{{ Route::currentRouteNamed('public.home') ? "active" : "" }}">
+              {{ __('Home') }}
+            </a>
+          @endif 
+          @if (Route::has('public.about-us'))
+            <a href="{{ route('public.about-us') }}" class="{{ Route::currentRouteNamed('public.about-us') ? "active" : "" }}">
+              {{ __('About Us') }}
+            </a>
+          @endif 
+          @if (Route::has('public.portfolio'))
+            <a href="{{ route('public.portfolio') }}" class="{{ Route::currentRouteNamed('public.portfolio') ? "active" : "" }}">
+              {{ __('Portfolio') }}
+            </a> 
+          @endif 
+          <div style="display: inline-block">
+            <a href="" class="d-inline active text-uppercase">{{ Config::get('languages')[App::getLocale()]['display'] }}</a> 
+            @foreach (Config::get('languages') as $lang => $language) 
+                @if ($lang != App::getLocale())
+                  <span class="lang-separator">|</span>
+                  <a href="{{ route('lang.switch', $lang) }}" class="d-inline">{{ strtoupper($language['display']) }}</a>
+                @endif
+            @endforeach  
+          </div>
+          <div> 
+          </div>
         </div>
+
       </div>
-    </div>
-    <div class="overlay" class="bg-honey-dew"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="min-h-100 min-w-100 w-auto h-auto">
-      <source src="https://player.vimeo.com/external/553362038.sd.mp4?s=7102361a0156a3689b83848a7cce9044180a335b&profile_id=164&oauth2_token_id=57447761" type="video/mp4"> 
-    </video>
-    <div class="container mt-0 pt-0" style="position: fixed; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%)">
-      <nav class="navbar navbar-dark mt-0 pt-5" id="navbar">
-        <a class="navbar-brand" href="#">
-          <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
-        </a>
-        <button onclick="openNav()" class="navbar-toggler text-right rounded-0 border-0 mt-0 pt-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
-          <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
-        </button>
-      </nav>
-    </div>
-    <div class="container h-100">
-      <div class="d-flex justify-content-center align-items-center" style="margin-top: 25vh">
-        <div class="text-honey-dew text-center">
-          <h1 class="display-3 text-uppercase font-weight-semi-bold">
-            {{ __('your goal')}},
-          </h1>
-          <h1 class="display-4 mb-0">
-            <span class="font-weigt-extra-light">
-              {{ __('is our') }}
-            </span>
-            <span class="text-uppercase font-weight-bold text-ocean-green">
-              {{ __('motivation') }}!
-            </span>
-          </h1>
-          <a href="" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
-            <span class="text h5 text-uppercase font-weight-semi-bold">
-              {{ __('projects') }} 
-              <i class="fas fa-chevron-right ml-2"></i>
-            </span>
-          </a>
-        </div> 
-      </div>
-    </div>
   </header> 
 
   <main>
     @yield('main') 
 
     <section>
-      <a href="#" id="scrollToTop" class="mr-4 mb-4 bg-dark-jungle-green scroll-to-top-btn rounded" style="display: none; position: fixed; z-index: 4; right: 0; bottom: 0;">
+      <a href="#" id="scrollToTop" class="mr-4 mb-4 bg-dark-jungle-green scroll-to-top-btn rounded-0" style="display: none; position: fixed; z-index: 4; right: 0; bottom: 0;">
         <i class="fas fa-chevron-up fa-2x p-2 text-honey-dew"></i>
       </a>
     </section>
@@ -151,7 +108,7 @@
                 {{ __('We are going to help you make it come true!')}}
               </h4> 
       
-              <div class="mt-5 d-flex align-items-center">
+              <div class="mt-5 d-flex align-items-center justify-content-center justify-content-md-start">
                 <span class="fa-stack fa-1x">
                   <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                   <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
@@ -163,7 +120,7 @@
                 </span>
               </div>   
               
-              <div class="mt-3 d-flex align-items-center">
+              <div class="mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
                 <span class="fa-stack fa-1x">
                   <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                   <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
@@ -173,7 +130,7 @@
                 </span>
               </div>
       
-              <div class="mt-4 d-flex align-items-center">
+              <div class="mt-4 d-flex align-items-center justify-content-center justify-content-md-start">
                 <span class="fa-stack fa-1x">
                   <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
                   <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
@@ -182,11 +139,11 @@
                   info@katrieldev.com
                 </span>
               </div>
+              
             </section> 
             
           </div>
           <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-center justify-content-lg-end align-items-center" style="overflow-y: hidden">
-            <span class="right-color-column"></span> 
             <form class="contact-form" style="width: 90%">
               <div class="form-group"> 
                 <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="{{ __('Name') }}"> 
@@ -210,12 +167,14 @@
                   </a>
                 </span> 
               </h6>
-              <button type="submit" class="btn mt-3 rounded-0 bg-dark-jungle-green text-honey-dew text-uppercase px-5 py-3"> 
-                <span class="h6 font-weight-semi-bold">
-                  {{ __('Send') }}  
-                </span> 
-                <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </button>
+              <div class="form-group mb-0 text-center text-md-left">
+                <button type="submit" class="btn mt-3 rounded-0 bg-dark-jungle-green text-honey-dew text-uppercase px-5 py-3"> 
+                  <span class="h6 font-weight-semi-bold">
+                    {{ __('Send') }}  
+                  </span> 
+                  <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -259,9 +218,9 @@
 
   // Duplicate code so the offset is checked even when page is refreshed, without scrolling anywhere
   if ($(document).scrollTop() > 300) {
-    $('#scrollToTop').show(300)
+    $('#scrollToTop').fadeIn()
   } else {
-    $('#scrollToTop').hide(300)
+    $('#scrollToTop').fadeOut()
   };
 
   /* Sticky Navbar */
@@ -297,9 +256,9 @@
     }
     
     if ($(document).scrollTop() > 300) {
-      $('#scrollToTop').show(300)
+      $('#scrollToTop').fadeIn(500)
     } else {
-      $('#scrollToTop').hide(300)
+      $('#scrollToTop').fadeOut(500)
     };
   }); 
 

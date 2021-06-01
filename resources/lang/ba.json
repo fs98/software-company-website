@@ -1,8 +1,7 @@
 { 
   
     "Home": "Početna",
-    "About Us": "O nama",
-    "Services": "Usluge",
+    "About Us": "O nama", 
     "Contact": "Kontakt",
 
     "your goal": "vaš cilj",
@@ -38,6 +37,22 @@
     "successful stories": "uspješnih priča",
     "friendships made": "sklopljenih prijateljstava",
     "lines of code": "linija koda",
+
+    "Unique": "Jedinstvenost",
+    "What makes us special?": "Šta nas to čini posebnima?",
+    "Quality": "Kvalitet",
+    "Quality competes with our other goals and we understand what it means to you.": "Razumijemo koliko Vam je kvalitet važan stoga na to gledamo kao na jedan od ciljeva.",
+    "Creativity": "Kreativnost",
+    "Feel like you lack imagination? We like to create things with fun.": "Da li osjećate da Vam nedostaje mašte? Mi činimo stvari zabavnim.",
+    "Support": "Podrška",
+    "We are always there for our customers so they know they can count on us.": "Uvijek smo tu za svoje klijete kako bi znali da mogu računati na nas.",
+
+    "Why us?": "Zašto mi?",
+    "A little bit about our company": "Nekoliko informacija o nama",
+    "KatrielDev became part of the Katriel Group in 2013. Our company consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a product. The products we offer you aim to improve the relationship between you and the end customer.": "KatrielDev postaje dijelom grupacije Katriel 2013. godine. Naša kompanija se sastoji od tima predanih programera i dizajnera koji svojim znanjem i umijećem ideju pretvaraju u proizvod. Proizvode koje ponudimo vama, za cilj imaju poboljšati veze između vas i krajnjeg kupca.",
+    "For this exact reason, KatrielDev goes through all the stages of development for a software solution, along with you. Thanks to the dedicated work of our team, we guarantee a high level of excellence in quality, and the support we give to our clients is extremely crucial for the longevity of the high quality quota we deliver. In today's extremely competitive market, KatrielDev has successfully distinguished itself as a reliable partner to companies from various business branches, and KatrielDev strives for constant perfection.": "Upravo iz tog razloga, KatrielDev zajedno sa Vama prolazi sve faze razvoja jednog softverskog rješenja. Predan rad našeg tima garant je izvrsnosti u kvalitetu, a support koji dajemo svojim klijentima izuzetno je bitan za održivost najviše moguće kvalitete i u budućnosti. Na danas izuzetno konkurentnom tržištu, KatrielDev uspješno se izdvojio kao pouzdan partner kompanijama iz različitih poslovnih branši, koji konstantno traga za savršenstvom.",
+
+    "Throughout our history, we had the pleasure of cooperating with various clients from different areas of interest.": "Kroz našu historiju, imali smo zadovoljstvo surađivati sa raznim klijentima iz različitih oblasti interesa.",
 
     "Contact Us": "Kontaktirajte nas",
     "Do you have an idea?": "Imate neku ideju?",
