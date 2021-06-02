@@ -11,6 +11,9 @@
 
   <title>{{ config('app.name', 'Katriel Dev') }}</title>
 
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script> 
 
@@ -81,6 +84,7 @@
 
   <main>
     @yield('main') 
+    @include('sweetalert::alert')
 
     <section>
       <a href="#" id="scrollToTop" class="mr-4 mb-4 bg-dark-jungle-green scroll-to-top-btn rounded-0" style="display: none; position: fixed; z-index: 4; right: 0; bottom: 0;">
@@ -144,18 +148,43 @@
             
           </div>
           <div class="col-12 col-lg-6 py-5 bg-honey-dew right-colored-column d-flex justify-content-center justify-content-lg-end align-items-center" style="overflow-y: hidden">
-            <form class="contact-form" style="width: 90%">
+            <form class="contact-form" style="width: 90%" method="POST" action="{{ route('questions.store') }}">
+              @csrf 
               <div class="form-group"> 
-                <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0" id="name" placeholder="{{ __('Name') }}"> 
+                <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0 @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="{{ __('Name') }}"> 
+              
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
               </div>
               <div class="form-group"> 
-                <input type="email" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="email" placeholder="Email">
+                <input type="email" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0 @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" name="email" placeholder="Email">
+
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
               </div>
               <div class="form-group"> 
-                <input type="text" class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="phone" placeholder="{{ __('Phone') }}">
+                <input type="text" class="form-control rounded-0 bg-transparent py-4 border-top-0 border-right-0 border-left-0 @error('phone') is-invalid @enderror" value="{{ old('phone') }}" id="phone" name="phone" placeholder="{{ __('Phone') }}">
+
+                @error('phone')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
               </div>
               <div class="form-group"> 
-                <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0" id="exampleFormControlTextarea1" rows="3" placeholder="{{ __('Message') }}" id="poruka"></textarea>
+                <textarea class="form-control rounded-0 bg-transparent py-4  border-top-0 border-right-0 border-left-0 @error('question') is-invalid @enderror" id="question" name="question" rows="3" placeholder="{{ __('Message') }}">{{ old('question') }}</textarea>
+
+                @error('question')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
               </div> 
               <h6 class="small mt-4">
                 <span>
@@ -191,7 +220,7 @@
             </a>
           </div>
           <div class="col-12 text-center font-weight-normal">
-            KatrielDev {{ now()->year }} | {{ __('All Rights Reserved') }}
+            KatrielDev {{ now()->year }} | {{ __('All rights reserved') }}
           </div>
         </div>
       </div>

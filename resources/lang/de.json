@@ -1,3 +1,70 @@
-{
-  "Home": "Startseite" 
+{ 
+  
+  "Home": "Startseite",
+  "About Us": "Über uns", 
+  "Contact": "Beratung",
+
+  "your goal": "ih erfolg",
+  "is our": "ist unsere",
+  "motivation": "motivation",
+
+  "projects": "projekte",
+
+  "Have a cookie!": "Nimm Keks!",
+  "We use cookies to improve user experience and reliability.": "Wir verwenden Cookies, um die Benutzererfahrung und Zuverlässigkeit zu verbessern.",
+  "I love cookies!": "Ich liebe Keks!",
+
+  "Check Out": "Mehr",
+  "Our Services": "Unsere Dienstleistungen",
+  "We specialized in": "Wir haben uns spezialisiert auf",
+  "Web Design": "Web-Design",
+  "Katrieldev's team will turn your company's website into an online showcase.": "Das Team von Katrieldev verwandelt die Website Ihres Unternehmens in ein Online-Schaufenster.",
+  "Web Development": "Web Entwicklung",
+  "By developing websites and applications, we help our clients to tell te world their story.": "Durch die Entwicklung von Websites und Anwendungen helfen wir unseren Kunden, der Welt ihre Geschichte zu erzählen.",
+  "Start Up": "Start up",
+  "Focus on growing your bussiness - we take care of the rest": "Konzentrieren Sie sich auf das Wachstum Ihres Unternehmens - wir kümmern uns um den Rest",
+  "Mobile Apps Development": "entwicklung mobiler Apps",
+  "Our team is going to make you a perfect smartphone application that will push the boundaries of your current bussiness.": "Unser Team wird Sie zu einer perfekten Smartphone-Anwendung machen, die die Grenzen Ihres aktuellen Geschäfts überschreitet.",
+  "3d Configurator": "3d-konfigurator",
+  "Our 3D configurator helps your customers to create custom products according to their wishes and tastes.": "Unser Team WIRD SIE zu Einer perfekten Smartphone-Anwendung machen, sterben sterben Grenzen IHRES aktuellen Geschäfts verlängern.",
+  "Web Shop": "Webshop",
+  "Erase the boundaries and open the doors of your store to the whole world!": "Löschen Sie die Grenzen und öffnen Sie die Türen Ihres Geschäfts für die ganze Welt!",
+
+  "Technologies": "Technologies",
+  "Meet Us": "Treffen Sie Uns",
+  "Short Summary": "Kurze Zusammenfassung",
+  "years of existing": "Jahre des Bestehens",
+  "successful stories": "erfolgreiche Geschichten",
+  "friendships made": "Freundschaften geschlossen",
+  "lines of code": "Zeilen von Code",
+
+  "Unique": "Einzigartig",
+  "What makes us special?": "Was macht uns besonders?",
+  "Quality": "Qualität",
+  "Quality competes with our other goals and we understand what it means to you.": "Qualität konkurriert mit unseren anderen Zielen und wir verstehen, was Qualität für Sie bedeutet.",
+  "Creativity": "Creativity",
+  "Feel like you lack imagination? We like to create things with fun.": "Haben Sie das Gefühl, Ihnen fehlt es an Fantasie? Wir kreieren gerne Dinge mit Spaß.",
+  "Support": "Unterstützung",
+  "We are always there for our customers so they know they can count on us.": "Wir sind immer für unsere Kunden da, damit sie wissen, dass sie sich auf uns verlassen können.",
+
+  "Why us?": "Warum uns?",
+  "A little bit about our company": "Ein bisschen über unser Unternehmen",
+  "KatrielDev became part of the Katriel Group in 2013. Our company consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a product. The products we offer you aim to improve the relationship between you and the end customer.": "KatrielDev wurde 2013 Teil der Katriel Group. Unser Unternehmen besteht aus einem engagierten Team von Entwicklern, die ihr Wissen und ihre Fähigkeiten einsetzen, um jede Idee in ein Produkt zu verwandeln. Die von uns angebotenen Produkte zielen darauf ab, die Beziehung zwischen Ihnen und dem Endkunden zu verbessern.",
+  "For this exact reason, KatrielDev goes through all the stages of development for a software solution, along with you. Thanks to the dedicated work of our team, we guarantee a high level of excellence in quality, and the support we give to our clients is extremely crucial for the longevity of the high quality quota we deliver. In today's extremely competitive market, KatrielDev has successfully distinguished itself as a reliable partner to companies from various business branches, and KatrielDev strives for constant perfection.": "Genau aus diesem Grund durchläuft KatrielDev gemeinsam mit Ihnen alle Entwicklungsstufen einer Softwarelösung. Durch die engagierte Arbeit unseres Teams garantieren wir ein hohes Maß an Qualität und die Betreuung unserer Kunden ist von entscheidender Bedeutung für die Langlebigkeit unserer hohen Qualitätsquote. Auf dem hart umkämpften Markt von heute hat sich KatrielDev erfolgreich als zuverlässiger Partner für Unternehmen aus verschiedenen Wirtschaftszweigen profiliert und strebt nach ständiger Perfektion.",
+
+  "Throughout our history, we had the pleasure of cooperating with various clients from different areas of interest.": "Im Laufe unserer Geschichte hatten wir das Vergnügen, mit verschiedenen Kunden aus unterschiedlichen Interessensgebieten zusammenzuarbeiten.",
+
+  "Contact Us": "Kontaktiere uns",
+  "Do you have an idea?": "Haben sie eine Idee?",
+  "We are going to help you make it come true!": "Wir helfen Ihnen bei der Verwirklichung!",
+  "Bosnia and Herzegovina": "Bosnien und Herzegowina",
+
+  "Name": "Name",
+  "Phone": "Telefonnummer",
+  "Message": "Nachricht",
+  "Your details will not be shared with any third party.": "Ihre Daten werden nicht an Drittunternehmen weitergegeben.",
+  "Privacy Policy": "Datenschutz-Bestimmungen",
+  "Send": "Senden",
+  "All rights reserved": "Alle Rechte vorbehalten" 
+
 }

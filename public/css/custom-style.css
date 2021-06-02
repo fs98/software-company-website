@@ -20,6 +20,11 @@ body {
   --swiper-theme-color: #151c19;
 }
 
+::selection {
+  background-color: var(--ocean-green);
+  color: var(--dark-jungle-green);
+}
+
 /**
 * Utility classes 
 */
