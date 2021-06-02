@@ -19,8 +19,14 @@ class NavigationController extends Controller
     } 
     
     //Public About Us Page
-    public function porfolio() 
+    public function portfolio() 
     {
       return view('pages.portfolio');
+    } 
+
+    //Privacy Policy
+    public function privacyPolicy() 
+    {
+      return view('pages.privacy-policy');
     } 
 }

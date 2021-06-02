@@ -11,7 +11,7 @@
       {{ __('I love cookies!') }}
     </a>
     <br>
-    <a href="#" class="small text-muted text-decoration-none privacy-policy-link" style="display: none">
+    <a href="{{ route('public.privacy-policy') }}" class="small text-muted text-decoration-none privacy-policy-link">
       {{ __('Privacy Policy')}}
     </a>
   </div>

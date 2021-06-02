@@ -6,8 +6,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="KatrielDev Website">
   <meta name="author" content="">
+
+  <meta property="og:title" content="Katrieldev | Home" />
+  <meta name="twitter:title" content="Katrieldev | Home">
+  <meta name="author" content="KatrielDev">
+  <meta property="og:site_name" content="Katrieldev" />
+  <meta name="description" content="KatrielDev is an IT company which consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a magnificent product.">
+  <meta property="og:description" content="KatrielDev is an IT company which consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a magnificent product.">
+  <meta name="twitter:description" content="KatrielDev is an IT company which consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a magnificent product.">
+  <meta name="keywords" content="online shop, ecommerce, online sales, shop, 3D configurator, online 3D modeller,  product placement, real time shop preview, assistive technology">
+  <meta name="robots" content="index, follow">
 
   <title>{{ config('app.name', 'Katriel Dev') }}</title>
 
@@ -39,7 +49,7 @@
 
   <section id="cookiesNotice">
     {{-- Cookie Consent --}}
-    @include('cookie-consent::index')
+
   </section>
 
   <header>
@@ -67,7 +77,7 @@
             </a> 
           @endif 
           <div style="display: inline-block">
-            <a href="" class="d-inline active text-uppercase">{{ Config::get('languages')[App::getLocale()]['display'] }}</a> 
+            <a href="{{ route('public.home') }}" class="d-inline active text-uppercase">{{ Config::get('languages')[App::getLocale()]['display'] }}</a> 
             @foreach (Config::get('languages') as $lang => $language) 
                 @if ($lang != App::getLocale())
                   <span class="lang-separator">|</span>
@@ -191,7 +201,7 @@
                   {{ __('Your details will not be shared with any third party.') }}
                 </span> 
                 <span>
-                  <a href="" class="text-ocean-green">
+                  <a href="{{ route('public.privacy-policy') }}" class="text-ocean-green">
                     {{ __('Privacy Policy') }}
                   </a>
                 </span> 
@@ -215,7 +225,7 @@
       <div class="container">
         <div class="row py-3">
           <div class="col-12 text-center">
-            <a href="" class="text-muted text-decoration-none font-weight-light">
+            <a href="{{ route('public.privacy-policy') }}" class="text-muted text-decoration-none font-weight-light">
               {{ __('Privacy Policy') }}
             </a>
           </div>
@@ -297,14 +307,14 @@
       $('body').delay(2000).css({'overflow':'visible'});
   }) 
 
-  /* Cookie Alert */
-  $('#cookieAlert').hover(function(){
-    $(this).find('.privacy-policy-link').fadeIn(1000);
-  }, function(){
-    $(this).find('.privacy-policy-link').fadeOut(1000);
-  })
+  // /* Cookie Alert */
+  // $('#cookieAlert').hover(function(){
+  //   $(this).find('.privacy-policy-link').fadeIn(1000);
+  // }, function(){
+  //   $(this).find('.privacy-policy-link').fadeOut(1000);
+  // })
 
-</script>
+</script> 
 
 @yield('scripts')
 </body>

@@ -7,7 +7,7 @@
     <section id="heroDiv" class="position-relative w-100 overflow-hidden bg-dark custom-border-radius"> {{-- style="border-end-end-radius: 40%" --}}
       <div class="container mt-0 pt-0" style="position: fixed; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%)">
         <nav class="navbar navbar-dark mt-0 pt-5" id="navbar">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ route('public.home') }}">
             <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
           </a>
           <button onclick="openNav()" class="navbar-toggler text-right rounded-0 border-0 mt-0 pt-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">

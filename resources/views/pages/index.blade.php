@@ -19,7 +19,7 @@
   </video>
   <div class="container mt-0 pt-0" style="position: fixed; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%)">
     <nav class="navbar navbar-dark mt-0 pt-5" id="navbar">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{{ route('public.home') }}">
         <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
       </a>
       <button onclick="openNav()" class="navbar-toggler text-right rounded-0 border-0 mt-0 pt-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
@@ -59,39 +59,39 @@
   <div class="swiper-container references-swiper" class="bg-ocean-green">
     <div class="swiper-wrapper">
       <div class="swiper-slide bg-transparent">
-        <a href="" class="w-auto">
+        <span class="w-auto">
           <img src="{{ asset('img/clients/bluestars-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="">
+        <span>
           <img src="{{ asset('img/clients/repromaterijal-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="">
+        <span>
           <img src="{{ asset('img/clients/limotesla-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="" class="w-auto">
+        <span class="w-auto">
           <img src="{{ asset('img/clients/bosnjak-commerce-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="" class="w-auto">
+        <span class="w-auto">
           <img src="{{ asset('img/clients/scu.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="" class="w-auto">
+        <span class="w-auto">
           <img src="{{ asset('img/clients/villa.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
       <div class="swiper-slide bg-transparent">
-        <a href="" class="w-auto">
+        <span class="w-auto">
           <img src="{{ asset('img/clients/sucasa.png')}}" alt="client-logo" height="100" width="100">
-        </a>
+        </span>
       </div>
     </div>   
   </div>
@@ -406,6 +406,6 @@ $(".services-card").hover(function(){
   }, function(){
     $(this).css("transition", "0.3s").removeClass("shadow-lg");
     $(this).find('a').fadeOut(200).addClass("d-none");
-});
+}); 
 </script>
 @endsection
