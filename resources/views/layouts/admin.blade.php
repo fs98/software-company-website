@@ -65,7 +65,7 @@
               <div id="collapseTwo" class="collapse {{ Route::currentRouteNamed('users.*') || Route::currentRouteNamed('home') ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
                       <h6 class="collapse-header">Upravljanje:</h6>
-                      <a class="collapse-item {{ Route::currentRouteNamed('users.index') || Route::currentRouteNamed('home') ? 'active' : '' }}" href="{{ route('users.index') }}">Pregled</a>
+                      <a class="collapse-item {{ Route::currentRouteNamed('users.*') || Route::currentRouteNamed('home') ? 'active' : '' }}" href="{{ route('users.index') }}">Pregled</a>
                       <a class="collapse-item" href="#">Cards</a>
                   </div>
               </div>

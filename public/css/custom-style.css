@@ -5,137 +5,829 @@
 */
 body {
   font-family: Poppins !important;
+  overflow: auto;
+  overflow-x: hidden !important;
 }
 
 :root {
-  --purple: #1F0045;
-  --white: #fafafa;
+  --dark-jungle-green: #151c19;
+  --bottle-green: #26664a;
+  --ocean-green: #03a678;
+  --tea-green: #c3e8cc;
+  --honeydew: #e9f5ec;  
+  --invalid: #f1a9a0;
+  --swiper-navigation-size: 20px;
+  --swiper-theme-color: #151c19;
 }
 
-/* Utility classes */
-
-.bg-purple {
-  background-color: var(--purple);
+::selection {
+  background-color: var(--ocean-green);
+  color: var(--dark-jungle-green);
 }
 
-.text-purple {
-  color: var(--purple);
-}
+/**
+* Utility classes 
+*/
 
-.purple-link:hover {
-  color: black;
-  transition: 0.5s;
-}
+    /* General */   
+    
+    .min-h-100 {
+      min-height: 100%;
+    }
+    
+    .min-w-100 {
+      min-width: 100%;
+    }
+    
+    .min-vh-85 {
+      height: 85vh !important;
+    }
+    
+    .min-vh-65 {
+      height: 65vh !important;
+    }
+    
+    .min-vh-55 {
+      height: 55vh !important;
+    }
 
-.bg-black {
-  background-color: black;
-}
+    .min-vh-99 {
+      min-height: 99vh !important;
+    }
+    
+    .line-height-1-5 {
+      line-height: 1.5;
+    }
+    
+    .line-height-60 {
+      line-height: 60px;
+    }
+    
+    .width-60 {
+      width: 60px;
+    }
+    
+    .height-60 {
+      height: 60px;
+    }
+    
+    .border-weight-2 {
+      border-width: 3px;
+    }
+    
+    .font-size-16 {
+      font-size: 16px;
+    }
 
-.min-h-100 {
-  min-height: 100%;
-}
+    /* Text colors */
 
-.min-w-100 {
-  min-width: 100%;
-}
+    .text-dark-jungle-green{
+      color: var(--dark-jungle-green);
+    }
 
-.min-vh-75 {
-  height: 75vh !important;
-}
+    .text-bottle-green 
+    {
+      color: var(--bottle-green);
+    }
 
-.min-vh-65 {
-  height: 65vh !important;
-}
+    .text-ocean-green 
+    {
+      color: var(--ocean-green);
+    }
 
-.min-vh-55 {
-  height: 55vh !important;
-}
+    .text-tea-green 
+    {
+      color: var(--tea-green);
+    }
 
-.line-height-1-5 {
-  line-height: 1.5;
-}
+    .text-honey-dew
+    {
+      color: var(--honeydew);
+    }
 
-.line-height-60 {
-  line-height: 60px;
-}
+    /* Background-colors */
+    
+    .bg-dark-jungle-green{
+      background-color: var(--dark-jungle-green);
+    }
 
-.width-60 {
-  width: 60px;
-}
+    .bg-bottle-green
+    {
+      background-color: var(--bottle-green);
+    }
 
-.height-60 {
-  height: 60px;
-}
+    .bg-ocean-green 
+    {
+      background-color: var(--ocean-green);
+    }
 
-.border-weight-2 {
-  border-width: 3px;
-}
+    .bg-tea-green 
+    {
+      background-color: var(--tea-green);
+    }
 
-.font-size-16 {
-  font-size: 16px;
-}
+    .bg-honey-dew
+    {
+      background-color: var(--honeydew);
+    }
 
-/* Rotate Title 90deg on Large devices */
-@media (min-width: 992px) {
-  .translate-lg-90-deg {
-    transform: rotate(-90deg);
-  }
-}
+    /* Buttons */
 
-/* Footer Input Fields */
+    .btn-outline-honey-dew
+    {
+      background-color: transparent;
+      border-color: var(--honeydew);
+      color: var(--honeydew);
+    }
 
-.footer-input {
-  color: var(--white);
-  font-size: 16px;
-}
+    .btn-outline-honey-dew:hover
+    {
+      background-color: transparent;
+      border: 1px solid var(--ocean-green);
+      color: var(--ocean-green);
+      transition: 1s;
+    }
+
+    /* Letter Spacing */
+
+    .wide-text {
+      letter-spacing: 1vmin;
+    }
+
+    /**
+    * Font weight 
+    * Font Weight Classes 300 - light, 400 - normal and 700 - bold Already Exist
+    */ 
+  
+    .font-weight-extra-light
+    {
+      font-weight: 200;
+    }
+
+    .font-weight-semi-bold
+    {
+      font-weight: 600;
+    }
+
+    /**
+    * Borders
+    */
+
+    .border-top-thick
+    {
+      border-top: 4px solid var(--ocean-green);
+    }
  
-.footer-input::placeholder {
-  font-size: 16px;
-  color: var(--white);
-}
+/**
+* Cookies Consent
+*/
 
-.footer-input:focus
- {
-  color: var(--white);
-  font-size: 16px;
-  box-shadow: none;
-  border-color: var(--purple) !important;
-}
+    /* Extra Small Devices */
+    #cookieAlert {
+      background-color: rgba(3,166,120,0.88);  
+      position: fixed; 
+      z-index: 4; 
+      left: 0; 
+      bottom: 0; 
+      height: 320px; 
+      width: 100%;
+      max-width: 100%;
+      transition: 0.5s;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+
+    /* Small Devices and Up */
+    @media (min-width: 576px) { 
+      #cookieAlert {    
+        height: 320px; 
+        width: 320px;  
+        margin-left: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    #cookieAlert:hover {
+      transition: 0.5s;
+    }
+
+/**
+* Full Screen Navbar 
+*/
+    #navbar {
+      transition: 0.5s;
+    }
+
+    /* The Overlay (background) */
+    .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    /* Position the content inside the overlay */
+    .overlay-content {
+      position: relative;
+      top: 25%; /* 25% from the top */
+      width: 100%; /* 100% width */
+      text-align: center; /* Centered text/links */
+      margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+
+    /* The navigation links inside the overlay */
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+
+    .overlay .lang-separator {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181; 
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+
+    /* The navigation links when active */
+    .overlay a.active { 
+      color: var(--ocean-green); 
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .overlay a:hover, .overlay a:focus {
+      color: var(--ocean-green);
+    }
+
+    /* Position the close button (top right corner) */
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+/**
+* Preloader 
+*/
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      /* change if the mask should have another color then white */
+      z-index: 99;
+      /* makes sure it stays on top */
+    } 
+
+    .centered{
+      width:400px;
+      height:400px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);  
+    }
+    .blob-1,.blob-2{
+      width:70px;
+      height:70px;
+      position:absolute;
+      background:#fff;
+      border-radius:50%;
+      top:50%;left:50%;
+      transform:translate(-50%,-50%);
+    }
+    .blob-1{
+      left:20%;
+      animation:osc-l 2.5s ease infinite;
+    }
+    .blob-2{
+      left:80%;
+      animation:osc-r 2.5s ease infinite;
+      background:var(--ocean-green)
+    }
+    @keyframes osc-l{
+      0%{left:20%;}
+      25%{left:50%;}
+      100%{left:20%;}
+    }
+    @keyframes osc-r{
+      0%{left:80%;}
+      50%{left:50%;}
+      100%{left:80%;}
+    }
+
+/**
+* Video Header 
+*/
+
+    /* Video header */ 
+
+    #heroDiv video {
+      position: absolute;
+      top: 50%;
+      left: 50%;  
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    #heroDiv .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #heroDiv .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 0.6;
+      z-index: 1;
+    }
+
+    /* Animated Contact Button */
+    .horizontal { 
+      position: relative;   
+      border-color: var(--honeydew); 
+      cursor: pointer;
+    }
+      .horizontal > .text {
+        position: relative;
+        color: transparent;
+        background-image: linear-gradient(90deg, var(--ocean-green) 0%, var(--ocean-green) 50%, var(--honeydew) 50%, var(--honeydew) 100%);
+        background-repeat: repeat;
+        background-size: 200%;
+        background-position: 100% 0;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: background-position 300ms;
+    }
+      .horizontal::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+        background: var(--honeydew);
+        transform-origin: 100% 0;
+        transform: scale3d(0, 1, 1);
+        transition: transform 300ms;
+    }
+      .horizontal:hover .text {
+        background-position: 0 0;
+    }
+      .horizontal:hover::before {
+        transform-origin: 0 0;
+        transform: scale3d(1, 1, 1);
+    }
+
+/**
+* Client Logo SLider
+*/
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px; 
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block; 
+      object-fit: contain;
+      width: 200px; 
+      filter: brightness(70%);
+    }
+
+    .swiper-slide img:hover { 
+      filter: brightness(40%);
+      transition: 1s;
+    }
+
+    .swiper-slide a { 
+      width: 200px;
+    }
+
+/**
+* Loader 
+*/
+
+    .loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-0%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; 
+      z-index: 3
+    }
+
+    .loading_line_wrapper {
+      width: 100%;
+      height: 6px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      bottom: auto;
+      right: auto;
+    }
+
+    .loading_line {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      height: 100%;
+      transform-origin: 100% 0%;
+      animation: kf_loading_line 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s infinite;
+    }
+      .loading_line_inner {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        transform-origin: 0% 0%;
+      }
+
+    .loading_line_inner--1 {
+      opacity: 0;  /* change for inner line opacity, currently 0/hidden */
+      animation: kf_loading_line_inner--1 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s infinite;
+    }
+
+    .loading_line_inner--2 {
+      opacity: 1;
+      animation: kf_loading_line_inner--2 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s infinite;
+    }
+
+    .loading_line_inner {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      height: 100%;
+      background-color: var(--ocean-green);
+      transform-origin: 0% 0%;
+    }
+
+    @keyframes kf_loading_line {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1);
+      }
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+
+    @keyframes kf_loading_line_inner--1 {
+      0% {
+        transform: scaleX(0);
+      }
+      25% {
+        transform: scaleX(1);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+
+    @keyframes kf_loading_line_inner--2 {
+      0% {
+        transform: scaleX(0);
+      }
+      25% {
+        transform: scaleX(0);
+      }
+      50% {
+        transform: scaleX(1);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+/*
+** Services Section 
+*/
+
+    #cardsSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat right bottom scroll; 
+      background-size: cover;
+    }
+
+    /* Button */
+
+    .services-button:hover {   
+      transition: 0.5s;
+    }
+
+    .services-button:hover i { 
+      margin-left: 30px !important;
+      transition: 0.5s;
+    }
+
+    .services-button i {  
+      transition: 0.5s;
+    }
+
+    .services-button {
+      transition: 0.5s; 
+      display: none; 
+    } 
+
+    /* Cards */
+
+/*
+** Technologies Section
+*/
+
+    #servicesSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat right bottom scroll; 
+      background-size: cover;
+    }
+
+    .technologies-row img { 
+      object-fit: contain !important;
+      width: auto;
+      max-width: 100px;
+      filter: grayscale(30%);
+      transition: 0.5s;
+    }
+
+    .technologies-row img:hover {
+      filter: grayscale(0%);
+      transition: 0.5s;
+    }
+
+/**
+* About Us Section
+*/
+
+    #aboutUsSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat right bottom scroll; 
+      background-size: cover;
+      background-color: gainsboro
+    }
+
+/**
+* Contact Section
+*/
  
-/* Video header */ 
+    @media (min-width: 992px) { 
+      #contactSection{
+        background: linear-gradient(
+          to right, 
+          var(--dark-jungle-green) 0%, 
+          var(--dark-jungle-green) 50%, 
+          var(--honeydew) 50%, 
+          var(--honeydew) 100%
+        );
+      }
+     }
 
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;  
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
 
-header .container {
-  position: relative;
-  z-index: 2;
-}
+    /* Form */
 
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.7;
-  z-index: 1;
-}
+    .contact-form .form-group>input,
+    .contact-form .form-group>textarea {
+      border-color: rgba(21, 28, 25, 0.1);
+      border-width: 2px !important; 
+      transition: 0.5s;
+    }
 
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://hireukrainiandevelopers.com/wp-content/uploads/2019/09/ebq6umm-min-1.jpg.webp') black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
-}
+    .contact-form .form-group>input:focus,
+    .contact-form .form-group>textarea:focus {
+      box-shadow: none;
+      color: var(--dark-jungle-green);
+      border-color: var(--bottle-green);
+      transition: 0.5s;
+    }
+
+    .contact-form .form-group>input:invalid,
+    .contact-form .form-group>textarea:invalid {
+      box-shadow: none;
+      color: var(--dark-jungle-green); 
+      border-color: var(--invalid);
+    } 
+
+    .contact-form button:hover { 
+      color: var(--dark-jungle-green);
+      border: 1px solid var(--dark-jungle-green) !important;
+      background-color: transparent;
+      transition: 0.5s;
+    }
+
+    .contact-form button:hover i { 
+      margin-left: 30px !important;
+      transition: 0.5s;
+    }
+
+    .contact-form button i {  
+      transition: 0.5s;
+    }
+
+    .contact-form button {
+      transition: 0.5s;
+      border: 1px solid var(--dark-jungle-green) !important;
+    }
+
+    .contact-form .form-group>textarea {
+      resize: none;
+    }
+
+/* Scroll To Top Btn */
+
+    .scroll-to-top-btn {
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+
+    .scroll-to-top-btn:hover {
+      opacity: 1;
+      transition: 0.5s;
+    }
+
+/**
+* Image Section
+*/
+
+    #imageSection {
+      background-color: rgba(21, 28, 25, 0.6);
+    }
+
+    #imageSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center  40% scroll; 
+      background-size: cover;
+    }
+
+/**
+* What Makes Us Special Section
+*/ 
+
+    #whatMakesUsSpecial::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat center center scroll; 
+      background-size: cover;
+    }
+
+/**
+* Portfolio Section
+*/
+
+    #portfolioSection::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;  
+      opacity: .5; 
+      z-index: -1;
+      background: url('https://image.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg') no-repeat center center scroll; 
+      background-size: cover;
+    }
+
+    /**
+    * Portfolio Swiper
+    */
+
+    .portfolio-swiper-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .portfolio-swiper-slide img {
+      object-fit: contain;
+      object-position: center;
+      height: auto;
+      width: 100%;
+      filter: none;
+    }
+
+    .portfolio-swiper-slide img:hover {
+      filter: none;
+    }
+
+    .portfolio-swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff; 
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    
+    .portfolio-swiper-slide {
+      width: 80%;
+      height: 100%;
+    } 
