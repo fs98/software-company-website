@@ -41,8 +41,20 @@
               <div class="swiper-wrapper portfolio-swiper-wrapper">
 
                 <div class="swiper-slide portfolio-swiper-slide position-relative">
+                  <a href="https://dualeswohnen.de/" class="h-100 w-100 text-decoration-none" target="_blank">
+                    <img src="{{ asset('img/projects/duwo.jpg') }}" alt="">
+                  </a>
+                </div>
+
+                <div class="swiper-slide portfolio-swiper-slide position-relative">
                   <a href="https://sucasa.ba/" class="h-100 w-100 text-decoration-none" target="_blank">
                     <img src="{{ asset('img/projects/sucasa.png') }}" alt="">
+                  </a>
+                </div> 
+
+                <div class="swiper-slide portfolio-swiper-slide position-relative">
+                  <a href="https://franjinaekonomija.hr/" class="h-100 w-100 text-decoration-none" target="_blank">
+                    <img src="{{ asset('img/projects/franjina.png') }}" alt="">
                   </a>
                 </div> 
 

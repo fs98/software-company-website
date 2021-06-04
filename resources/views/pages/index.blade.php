@@ -64,6 +64,11 @@
         </span>
       </div>
       <div class="swiper-slide bg-transparent">
+        <span class="w-auto">
+          <img src="{{ asset('img/clients/duwo-logo.png')}}" alt="client-logo" height="100" width="100">
+        </span>
+      </div>
+      <div class="swiper-slide bg-transparent">
         <span>
           <img src="{{ asset('img/clients/repromaterijal-logo-white.png')}}" alt="client-logo" height="100" width="100">
         </span>
