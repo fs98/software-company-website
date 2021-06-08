@@ -19,7 +19,7 @@ use App\Http\Controllers\QuestionsController;
 
 Route::get('/', [NavigationController::class, 'index'])->name('public.home');
 Route::get('/about-us', [NavigationController::class, 'about'])->name('public.about-us');
-Route::get('/porfolio', [NavigationController::class, 'portfolio'])->name('public.portfolio');
+Route::get('/portfolio', [NavigationController::class, 'portfolio'])->name('public.portfolio');
 Route::get('/privacy-policy', [NavigationController::class, 'privacyPolicy'])->name('public.privacy-policy');
 
 Auth::routes(['register' => false]);

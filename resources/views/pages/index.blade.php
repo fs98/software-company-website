@@ -31,7 +31,7 @@
     <div class="d-flex justify-content-center align-items-center" style="margin-top: 25vh">
       <div class="text-honey-dew text-center">
         <h1 class="display-3 text-uppercase font-weight-semi-bold">
-          {{ __('your goal')}},
+          {{ __('your success')}},
         </h1>
         <h1 class="display-4 mb-0">
           <span class="font-weigt-extra-light">

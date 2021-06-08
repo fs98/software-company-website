@@ -122,36 +122,42 @@
                 {{ __('We are going to help you make it come true!')}}
               </h4> 
       
-              <div class="mt-5 d-flex align-items-center justify-content-center justify-content-md-start">
-                <span class="fa-stack fa-1x">
-                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                  <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
-                </span>
-                <span class="text-honey-dew font-weight-light ml-3">
-                  Donje Putićevo 109, 72270 Travnik
-                  <br>
-                  {{ __('Bosnia and Herzegovina') }}
-                </span>
-              </div>   
-              
-              <div class="mt-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <span class="fa-stack fa-1x">
-                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                  <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
-                </span>
-                <span class="text-honey-dew font-weight-light ml-3">
-                  +387 30 555 666
-                </span>
-              </div>
-      
-              <div class="mt-4 d-flex align-items-center justify-content-center justify-content-md-start">
-                <span class="fa-stack fa-1x">
-                  <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
-                  <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
-                </span>
-                <span class="text-honey-dew font-weight-light ml-3">
-                  info@katrieldev.com
-                </span>
+              <div class="d-flex flex-column align-items-center align-items-md-start">
+                <div>
+                  <div class="mt-5 d-flex align-items-center justify-content-start">
+                    <span class="fa-stack fa-1x">
+                      <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                      <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
+                    </span>
+                    <span class="text-honey-dew text-left font-weight-light ml-3">
+                      Donje Putićevo 109,
+                      <br>
+                      72270 Travnik
+                      <br>
+                      {{ __('Bosnia and Herzegovina') }}
+                    </span>
+                  </div>   
+                  
+                  <div class="mt-3 d-flex align-items-center justify-content-start">
+                    <span class="fa-stack fa-1x">
+                      <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                      <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
+                    </span>
+                    <span class="text-honey-dew font-weight-light ml-3">
+                      +387 30 708 300
+                    </span>
+                  </div>
+          
+                  <div class="mt-4 d-flex align-items-center justify-content-start">
+                    <span class="fa-stack fa-1x">
+                      <i class="fa fa-circle fa-stack-2x text-ocean-green"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
+                    </span>
+                    <span class="text-honey-dew font-weight-light ml-3">
+                      info@katrieldev.com
+                    </span>
+                  </div>
+                </div>
               </div>
               
             </section> 
