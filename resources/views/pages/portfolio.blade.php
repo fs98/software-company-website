@@ -47,18 +47,6 @@
                 </div>
 
                 <div class="swiper-slide portfolio-swiper-slide position-relative">
-                  <a href="https://sucasa.ba/" class="h-100 w-100 text-decoration-none" target="_blank">
-                    <img src="{{ asset('img/projects/sucasa.png') }}" alt="">
-                  </a>
-                </div> 
-
-                <div class="swiper-slide portfolio-swiper-slide position-relative">
-                  <a href="https://franjinaekonomija.hr/" class="h-100 w-100 text-decoration-none" target="_blank">
-                    <img src="{{ asset('img/projects/franjina.png') }}" alt="">
-                  </a>
-                </div> 
-
-                <div class="swiper-slide portfolio-swiper-slide position-relative">
                   <a href="https://limo-tesla.com/" class="h-100 w-100 text-decoration-none" target="_blank">
                     <img src="{{ asset('img/projects/limotesla.png') }}" alt="">
                   </a>
@@ -71,16 +59,28 @@
                 </div> 
 
                 <div class="swiper-slide portfolio-swiper-slide position-relative">
-                  <a href="https://villarevelin.com/" class="h-100 w-100 text-decoration-none" target="_blank">
-                    <img src="{{ asset('img/projects/villa-revelin.png') }}" alt="">
-                  </a>
-                </div>  
-
-                <div class="swiper-slide portfolio-swiper-slide position-relative">
                   <a href="https://scu-bih.ba/" class="h-100 w-100 text-decoration-none" target="_blank">
                     <img src="{{ asset('img/projects/scu.png') }}" alt="">
                   </a>
                 </div> 
+
+                <div class="swiper-slide portfolio-swiper-slide position-relative">
+                  <a href="https://sucasa.ba/" class="h-100 w-100 text-decoration-none" target="_blank">
+                    <img src="{{ asset('img/projects/sucasa.png') }}" alt="">
+                  </a>
+                </div> 
+
+                <div class="swiper-slide portfolio-swiper-slide position-relative">
+                  <a href="https://franjinaekonomija.hr/" class="h-100 w-100 text-decoration-none" target="_blank">
+                    <img src="{{ asset('img/projects/franjina.png') }}" alt="">
+                  </a>
+                </div> 
+
+                <div class="swiper-slide portfolio-swiper-slide position-relative">
+                  <a href="https://villarevelin.com/" class="h-100 w-100 text-decoration-none" target="_blank">
+                    <img src="{{ asset('img/projects/villa-revelin.png') }}" alt="">
+                  </a>
+                </div>  
 
                 <div class="swiper-slide portfolio-swiper-slide position-relative">
                   <a href="https://www.bosnjak-commerce.com/" class="h-100 w-100 text-decoration-none" target="_blank">
