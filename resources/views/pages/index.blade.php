@@ -33,14 +33,14 @@
         <h1 class="display-3 text-uppercase font-weight-semi-bold">
           {{ __('your success')}},
         </h1>
-        <h1 class="display-4 mb-0">
+        <p class="h1 display-4 mb-0">
           <span class="font-weigt-extra-light">
             {{ __('is our') }}
           </span>
           <span class="text-uppercase font-weight-bold text-ocean-green">
             {{ __('motivation') }}!
           </span>
-        </h1>
+        </p>
         <a href="{{ route('public.portfolio') }}" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
           <span class="text h5 text-uppercase font-weight-semi-bold">
             {{ __('projects') }} 
@@ -112,18 +112,18 @@
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
           {{ __('our services')}}
         </h6>
-        <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
+        <span class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
           {{ __('We specialized in')}}
-        </h1>
+        </span>
       </div>
     </div>
     <div class="row mt-5 mb-5">
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Web Design') }}</h3> 
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Web Design') }}</h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('Katrieldev\'s team will turn your company\'s website into an online showcase.') }}
               </p>
@@ -137,11 +137,11 @@
         </div>
       </div> 
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1331-repository-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Web development') }}</h3> 
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Web development') }}</h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('By developing websites and applications, we help our clients to tell te world their story.')}} 
               </p>
@@ -155,11 +155,11 @@
         </div>
       </div> 
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/981-consultation-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">{{ __('Start Up') }}</h3> 
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Start Up') }}</h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('Focus on growing your bussiness - we take care of the rest') }} 
               </p>
@@ -173,13 +173,13 @@
         </div>
       </div> 
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1326-command-window-line-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
                 {{ __('Mobile Apps Development') }}
-              </h3> 
+              </h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('Our team is going to make you a perfect smartphone application that will push the boundaries of your current bussiness.') }}
               </p>
@@ -193,13 +193,13 @@
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/1378-3-d-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
                 {{ __('3d Configurator') }}
-              </h3> 
+              </h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('Our 3D configurator helps your customers to create custom products according to their wishes and tastes.') }}
               </p>
@@ -213,13 +213,13 @@
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 22rem">
+        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
           <div class="card-body d-flex justify-content-center align-items-start position-relative">
             <div class="my-3 text-center"> 
               <img src="{{ asset('img/icons/gif/139-basket-outline.gif') }}" alt="">
-              <h3 class="card-title font-weight-bold text-uppercase mt-4">
+              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
                 {{ __('Web Shop') }}  
-              </h3> 
+              </h2> 
               <p class="card-text text-muted h6 px-4">
                 {{ __('Erase the boundaries and open the doors of your store to the whole world!') }}
               </p>
@@ -245,9 +245,9 @@
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
           {{ __('Technologies')}}
         </h6>
-        <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
+        <span class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
           {{ __('Our Services')}}
-        </h1>
+        </span>
       </div>
     </div>
 
@@ -345,33 +345,33 @@
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
           {{ __('Meet Us')}}
         </h6>
-        <h1 class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
+        <span class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
           {{ __('Short Summary')}}
-        </h1>
+        </span>
       </div>
     </div>
     <div class="row py-5 no-gutters" data-aos="fade-up">
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
-          <h1 class="font-weight-bold"><span class="count">8</span> +</h1>
+          <span class="font-weight-bold h1"><span class="count">8</span> +</span>
           <h5 class="font-weight-light">{{ __('years of existing') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div>
-          <h1 class="font-weight-bold"><span class="count">100</span> +</h1>
+          <span class="font-weight-bold h1"><span class="count">100</span> +</span>
           <h5 class="font-weight-light">{{ __('successful stories') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
-          <h1 class="font-weight-bold"><span class="count">200</span> +</h1>
+          <span class="font-weight-bold h1"><span class="count">200</span> +</span>
           <h5 class="font-weight-light">{{ __('friendships made') }}</h5>
         </div>
       </div>
       <div class="col-12 col-md-6 mb-4 col-lg-3 text-center">
         <div class="">
-          <h1><i class="fas fa-infinity"></i></h1>
+          <span><i class="fas fa-infinity h1"></i></span>
           <h5 class="font-weight-light">{{ __('lines of code') }}</h5>
         </div>
       </div>

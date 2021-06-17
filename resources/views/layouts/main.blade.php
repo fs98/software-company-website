@@ -38,14 +38,14 @@
 <body class="bg-light"> 
 
   <!-- Preloader -->
-  {{-- <div id="preloader">
+  <div id="preloader">
     <div class="bg-bottle-green h-100 d-flex justify-content-center align-items-center" id="spinner">
       <div class="centered">
         <div class="blob-1"></div>
         <div class="blob-2"></div>
       </div>
     </div>
-  </div> --}}
+  </div>
 
   <section id="cookiesNotice">
     {{-- Cookie Consent --}}
