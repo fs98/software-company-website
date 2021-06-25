@@ -18,6 +18,8 @@
   <meta name="twitter:description" content="KatrielDev is an IT company which consists of a dedicated team of developers who use their knowledge and skills to turn any idea into a magnificent product.">
   <meta name="keywords" content="online shop, ecommerce, online sales, shop, 3D configurator, online 3D modeller,  product placement, real time shop preview, assistive technology">
   <meta name="robots" content="index, follow">
+  <meta property="og:image" content="{{ asset('img/logo-share.png') }}" />
+  <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}" />
 
   <title>{{ config('app.name', 'Katriel Dev') }}</title>
 
