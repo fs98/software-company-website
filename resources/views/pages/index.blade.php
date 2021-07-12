@@ -143,7 +143,7 @@
               <img src="{{ asset('img/icons/gif/1331-repository-outline.gif') }}" alt="">
               <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Web development') }}</h2> 
               <p class="card-text text-muted h6 px-4">
-                {{ __('By developing websites and applications, we help our clients to tell te world their story.')}} 
+                {{ __('By developing websites and applications, we help our clients to tell the world their story.')}} 
               </p>
             </div>
             <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
@@ -161,7 +161,7 @@
               <img src="{{ asset('img/icons/gif/981-consultation-outline.gif') }}" alt="">
               <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Start Up') }}</h2> 
               <p class="card-text text-muted h6 px-4">
-                {{ __('Focus on growing your bussiness - we take care of the rest') }} 
+                {{ __('Focus on growing your bussiness - we take care of the rest.') }} 
               </p>
             </div>
             <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
