@@ -34,7 +34,7 @@ class QuestionMail extends Mailable
     public function build()
     {  
         return $this->markdown('emails.QuestionMail')
-        ->to('info@katrieldev.com', 'Katriel Dev')
+        ->to('info@yourcompany.com', 'Your Company')
         ->from($this->email, ucfirst($this->name))
         ->replyTo($this->email, ucfirst($this->name))
         ->subject('Novo pitanje od ' . ucfirst($this->name));

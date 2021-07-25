@@ -76,8 +76,11 @@ class QuestionsController extends Controller
         }
 
         Alert::success($messageHeader, $message);
-        Mail::send(new QuestionMail($request->name, $request->email, $request->phone, $request->question));
-        Mail::send(new QuestionMailCustomer($request->name, $request->email, $mailSubject, $mailGreeting, $mailFirstLine, $mailSecondLine, $mailThirdLine, $mailThanks));
+        // First Fill Email Info in app/Mail/QuestionMail.php and .env file, then uncomment the following two lines. First one for sending email to company, and second one for sending email to user. 
+
+
+        // Mail::send(new QuestionMail($request->name, $request->email, $request->phone, $request->question));
+        // Mail::send(new QuestionMailCustomer($request->name, $request->email, $mailSubject, $mailGreeting, $mailFirstLine, $mailSecondLine, $mailThirdLine, $mailThanks));
         return redirect()->route('public.home');
     }
 

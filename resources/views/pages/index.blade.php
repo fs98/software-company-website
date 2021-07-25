@@ -20,7 +20,7 @@
   <div class="container mt-0 pt-0" style="position: fixed; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%)">
     <nav class="navbar navbar-dark mt-0 pt-5" id="navbar">
       <a class="navbar-brand" href="{{ route('public.home') }}">
-        <img src="{{ asset('img/icons/logo.svg') }}" alt="logo" height="45" width="auto">
+        <img src="{{ asset('img/main-logo.png') }}" alt="logo" height="45" width="auto">
       </a>
       <button onclick="openNav()" class="navbar-toggler text-right rounded-0 border-0 mt-0 pt-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
         <img src="{{ asset('img/icons/toggler-icon.svg') }}" alt="toggler-icon" height="25" width="auto">
@@ -31,19 +31,19 @@
     <div class="d-flex justify-content-center align-items-center" style="margin-top: 25vh">
       <div class="text-honey-dew text-center">
         <h1 class="display-3 text-uppercase font-weight-semi-bold">
-          {{ __('your success')}},
+          {{ __('Lorem ipsum')}},
         </h1>
         <p class="h1 display-4 mb-0">
           <span class="font-weigt-extra-light">
-            {{ __('is our') }}
+            {{ __('dolor sit') }}
           </span>
           <span class="text-uppercase font-weight-bold text-ocean-green">
-            {{ __('motivation') }}!
+            {{ __('amet') }}!
           </span>
         </p>
         <a href="{{ route('public.portfolio') }}" class="horizontal text-decoration-none btn rounded-0 mt-3 py-3 px-5">
           <span class="text h5 text-uppercase font-weight-semi-bold">
-            {{ __('projects') }} 
+            {{ __('Text') }} 
             <i class="fas fa-chevron-right ml-2"></i>
           </span>
         </a>
@@ -58,46 +58,13 @@
   <!-- Swiper -->
   <div class="swiper-container references-swiper" class="bg-ocean-green">
     <div class="swiper-wrapper">
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/bluestars-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/duwo-logo.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span>
-          <img src="{{ asset('img/clients/repromaterijal-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span>
-          <img src="{{ asset('img/clients/limotesla-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/bosnjak-commerce-logo-white.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/scu.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/villa.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
-      <div class="swiper-slide bg-transparent">
-        <span class="w-auto">
-          <img src="{{ asset('img/clients/sucasa.png')}}" alt="client-logo" height="100" width="100">
-        </span>
-      </div>
+      @for ($i = 0; $i < 10; $i++)
+        <div class="swiper-slide bg-transparent">
+          <span class="w-auto">
+            <img src="{{ asset('img/clients/placeholder-logo-white.png')}}" alt="client-logo" height="100" width="100">
+          </span>
+        </div>
+      @endfor
     </div>   
   </div>
 </section>
@@ -110,7 +77,7 @@
     <div class="row">
       <div class="col-12 text-center" data-aos="fade-up">
         <h6 class="font-weight-semi-bold text-ocean-green h6 text-uppercase">
-          {{ __('our services')}}
+          {{ __('Our Services')}}
         </h6>
         <span class="font-weight-semi-bold text-dark-jungle-green h1 mt-3">
           {{ __('We specialized in')}}
@@ -118,120 +85,26 @@
       </div>
     </div>
     <div class="row mt-5 mb-5">
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Web Design') }}</h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('Katrieldev\'s team will turn your company\'s website into an online showcase.') }}
-              </p>
+      @for ($i = 0; $i < 6; $i++)
+        <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
+          <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
+            <div class="card-body d-flex justify-content-center align-items-start position-relative">
+              <div class="my-3 text-center"> 
+                <img src="{{ asset('img/icons/gif/1388-page-view-quilt-outline.gif') }}" alt="">
+                <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Title'). ' ' .$i+1 }}</h2> 
+                <p class="card-text text-muted h6 px-4">
+                  {{ __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat laoreet diam, eu eleifend est vulputate in. Quisque sollicitudin egestas nibh.') }}
+                </p>
+              </div>
+              <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 py-3 d-none services-button" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
+                <span class="h5 font-weight-normal text-uppercase text-honey-dew">
+                  {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
+                </span>
+              </a>
             </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 py-3 d-none services-button" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </span>
-            </a>
           </div>
         </div>
-      </div> 
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/1331-repository-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Web development') }}</h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('By developing websites and applications, we help our clients to tell the world their story.')}} 
-              </p>
-            </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div> 
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/981-consultation-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">{{ __('Start Up') }}</h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('Focus on growing your bussiness - we take care of the rest.') }} 
-              </p>
-            </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div> 
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/1326-command-window-line-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
-                {{ __('Mobile Apps Development') }}
-              </h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('Our team is going to make you a perfect smartphone application that will push the boundaries of your current bussiness.') }}
-              </p>
-            </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-2 fa-sm"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/1378-3-d-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
-                {{ __('3d Configurator') }}
-              </h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('Our 3D configurator helps your customers to create custom products according to their wishes and tastes.') }}
-              </p>
-            </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4 mt-5" data-aos="fade-up">
-        <div class="card p-3 rounded-0 border-0 shadow-sm services-card" style="min-height: 24rem">
-          <div class="card-body d-flex justify-content-center align-items-start position-relative">
-            <div class="my-3 text-center"> 
-              <img src="{{ asset('img/icons/gif/139-basket-outline.gif') }}" alt="">
-              <h2 class="card-title font-weight-bold h3 text-uppercase mt-4">
-                {{ __('Web Shop') }}  
-              </h2> 
-              <p class="card-text text-muted h6 px-4">
-                {{ __('Erase the boundaries and open the doors of your store to the whole world!') }}
-              </p>
-            </div>
-            <a href="{{ route('public.portfolio') }}" class="btn float-right rounded-0 bg-ocean-green border-0 d-none services-button py-3" style="position: absolute; bottom: 0; margin-bottom: -35px; width: 55%">
-              <span class="h5 font-weight-normal text-uppercase text-honey-dew">
-                {{ __('Check Out') }} <i class="fas fa-chevron-right ml-3 fa-sm"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+      @endfor 
     </div>
   </div>
 </section>

@@ -39,7 +39,7 @@ class QuestionMailCustomer extends Mailable
     {  
         return $this->markdown('emails.QuestionMailCustomer')
         ->to($this->email, ucfirst($this->name))
-        ->from('no-reply@katrieldev.com', 'Katriel Dev') 
+        ->from('no-reply@yourcompany.com', 'Your Company') 
         ->subject($this->mailSubject);
     }
 }

@@ -17,6 +17,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/custom-style.css') }}">
+
 
 </head>
 <body id="page-top">

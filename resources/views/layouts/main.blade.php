@@ -21,7 +21,7 @@
   <meta property="og:image" content="{{ asset('img/logo-share.png') }}" />
   <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}" />
 
-  <title>{{ config('app.name', 'Katriel Dev') }}</title>
+  <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -39,7 +39,7 @@
 
 <body class="bg-light"> 
 
-  <!-- Preloader -->
+  {{-- <!-- Preloader -->
   <div id="preloader">
     <div class="bg-bottle-green h-100 d-flex justify-content-center align-items-center" id="spinner">
       <div class="centered">
@@ -47,7 +47,7 @@
         <div class="blob-2"></div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <section id="cookiesNotice">
     {{-- Cookie Consent --}}
@@ -132,11 +132,11 @@
                       <i class="fa fa-map-marker fa-stack-1x fa-xs text-honey-dew"></i>
                     </span>
                     <span class="text-honey-dew text-left font-weight-light ml-3">
-                      Donje Putićevo 109,
+                      Fake Street
                       <br>
-                      72270 Travnik
+                      12345 Imaginary City
                       <br>
-                      {{ __('Bosnia and Herzegovina') }}
+                      {{ __('Utopia') }}
                     </span>
                   </div>   
                   
@@ -146,7 +146,7 @@
                       <i class="fa fa-phone fa-stack-1x fa-xs text-honey-dew"></i>
                     </span>
                     <span class="text-honey-dew font-weight-light ml-3">
-                      +387 30 708 300
+                      +000 12 345 6789
                     </span>
                   </div>
           
@@ -156,7 +156,7 @@
                       <i class="fa fa-envelope fa-stack-1x fa-xs text-honey-dew"></i>
                     </span>
                     <span class="text-honey-dew font-weight-light ml-3">
-                      info@katrieldev.com
+                      info@yourcompany.com
                     </span>
                   </div>
                 </div>
@@ -238,7 +238,7 @@
             </a>
           </div>
           <div class="col-12 text-center font-weight-normal">
-            KatrielDev {{ now()->year }} | {{ __('All rights reserved') }}
+            Name of Your Company {{ now()->year }} | {{ __('All rights reserved') }}
           </div>
         </div>
       </div>
